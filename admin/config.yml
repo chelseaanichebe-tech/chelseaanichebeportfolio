@@ -7,8 +7,8 @@ local_backend: true
 media_folder: "uploads"
 public_folder: "/uploads"
 
-site_url: https://example.com
-display_url: https://example.com
+site_url: https://chelseaanichebeportfolio.netlify.app
+display_url: https://chelseaanichebeportfolio.netlify.app
 
 logo_url: "" 
 
