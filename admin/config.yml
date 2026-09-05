@@ -10,7 +10,7 @@ public_folder: "/uploads"
 site_url: https://chelseaanichebeportfolio.netlify.app
 display_url: https://chelseaanichebeportfolio.netlify.app
 
-logo_url: "" 
+logo_url: ""
 
 slug:
   encoding: "ascii"
@@ -126,13 +126,18 @@ collections:
                 widget: "list"
                 field: { label: "Tool", name: "tool", widget: "string" }
               - { label: "Description (modal)", name: "description", widget: "text" }
-              - { label: "Card / Cover Image", name: "image", widget: "image", required: false, hint: "Main image shown on the portfolio card" }
+              - { label: "Card / Cover Image", name: "image", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads", hint: "Main image shown on the portfolio card" }
               - { label: "Image Alt / Placeholder Text", name: "imageAlt", widget: "string" }
               - label: "Extra Project Images (gallery)"
                 name: "images"
                 widget: "list"
                 summary: "{{fields.src}}"
-                field: { label: "Image", name: "src", widget: "image" }
+                field:
+                  label: "Image"
+                  name: "src"
+                  widget: "image"
+                  media_folder: "uploads"
+                  public_folder: "/uploads"
                 hint: "Add as many extra images as you want. Shown in the project modal gallery."
                 required: false
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
@@ -153,7 +158,7 @@ collections:
               - { label: "Quote / Testimonial Text", name: "quote", widget: "text" }
               - { label: "Client Name", name: "name", widget: "string" }
               - { label: "Role / Company", name: "role", widget: "string" }
-              - { label: "Client Photo (optional)", name: "photo", widget: "image", required: false }
+              - { label: "Client Photo (optional)", name: "photo", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads" }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
               - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
               - { label: "Is Placeholder / Demo", name: "isPlaceholder", widget: "boolean", default: false, hint: "Mark true for demo content so it is clearly labelled on the site" }
@@ -173,7 +178,7 @@ collections:
               - { label: "Label (e.g. FUN FACT 01)", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
-              - { label: "Optional Image", name: "image", widget: "image", required: false }
+              - { label: "Fun Fact Image", name: "image", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads", hint: "Optional image for this fun fact." }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
               - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
 
@@ -208,6 +213,6 @@ collections:
               - { label: "Label (e.g. CERTIFICATION 01)", name: "label", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Link (certificate URL or #)", name: "link", widget: "string" }
-              - { label: "Certificate Image", name: "image", widget: "image", required: false }
+              - { label: "Certificate Image", name: "image", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads" }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
               - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
