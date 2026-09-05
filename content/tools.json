@@ -1,16 +1,54 @@
 {
   "items": [
-    { "name": "Google Workspace", "visible": true, "order": 1 },
-    { "name": "Microsoft Office", "visible": true, "order": 2 },
-    { "name": "ClickUp", "visible": true, "order": 3 },
-    { "name": "Asana", "visible": true, "order": 4 },
-    { "name": "Notion", "visible": true, "order": 5 },
-    { "name": "Trello", "visible": true, "order": 6 },
-    { "name": "Monday.com", "visible": true, "order": 7 },
-    { "name": "Calendly", "visible": true, "order": 8 },
-    { "name": "Slack", "visible": true, "order": 9 },
-    { "name": "Airtable", "visible": true, "order": 10 },
-    { "name": "Canva", "visible": true, "order": 11 },
-    { "name": "Zoom", "visible": true, "order": 12 }
+    {
+      "name": "Google Workspace",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "name": "Microsoft Office",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "name": "ClickUp",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "name": "Asana",
+      "visible": true,
+      "order": 4
+    },
+    {
+      "name": "Notion",
+      "visible": true,
+      "order": 5
+    },
+    {
+      "name": "Trello",
+      "visible": true,
+      "order": 6
+    },
+    {
+      "name": "Calendly",
+      "visible": true,
+      "order": 8
+    },
+    {
+      "name": "Slack",
+      "visible": true,
+      "order": 9
+    },
+    {
+      "name": "Canva",
+      "visible": true,
+      "order": 11
+    },
+    {
+      "name": "Zoom",
+      "visible": true,
+      "order": 12
+    }
   ]
 }
