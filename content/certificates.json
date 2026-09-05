@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "label": "CERTIFICATION 01",
+      "title": "Virtual Assistant Training Certificate",
+      "link": "#",
+      "image": "",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "label": "CERTIFICATION 02",
+      "title": "Administrative & Productivity Training",
+      "link": "#",
+      "image": "",
+      "visible": true,
+      "order": 2
+    }
+  ]
+}

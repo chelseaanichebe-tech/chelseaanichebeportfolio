@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "number": "01",
+      "title": "Calendar & Time Management",
+      "description": "Coordinate meetings, protect priorities, manage scheduling conflicts and keep calendars organised around what matters most."
+    },
+    {
+      "number": "02",
+      "title": "Inbox & Communication Management",
+      "description": "Organise incoming messages, flag priorities, support follow-ups and help keep communication clear and timely."
+    },
+    {
+      "number": "03",
+      "title": "Project & Task Coordination",
+      "description": "Break work into trackable tasks, monitor deadlines, organise workflows and keep project details visible."
+    },
+    {
+      "number": "04",
+      "title": "Travel & Meeting Coordination",
+      "description": "Organise travel details, meeting information, schedules and supporting documents so plans are easy to follow."
+    },
+    {
+      "number": "05",
+      "title": "File Organisation",
+      "description": "Create logical folder structures, maintain shared documents and make information easier for teams to find."
+    },
+    {
+      "number": "06",
+      "title": "Data Entry & Reporting",
+      "description": "Maintain accurate records, organise spreadsheet data and turn information into clear, useful reports."
+    }
+  ]
+}

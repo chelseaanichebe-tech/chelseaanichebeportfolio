@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "quote": "Chelsea brought structure and clarity to a project that had several moving parts. She was organised, responsive, and incredibly attentive to the details.",
+      "name": "Client Name",
+      "role": "Founder / Executive",
+      "photo": "",
+      "visible": true,
+      "order": 1,
+      "isPlaceholder": true
+    }
+  ]
+}

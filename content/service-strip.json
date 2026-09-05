@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "name": "Calendar Management", "visible": true, "order": 1 },
+    { "name": "Inbox Management", "visible": true, "order": 2 },
+    { "name": "Project Coordination", "visible": true, "order": 3 },
+    { "name": "File Organisation", "visible": true, "order": 4 },
+    { "name": "Data Entry & Reporting", "visible": true, "order": 5 }
+  ]
+}

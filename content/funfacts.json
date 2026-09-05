@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "label": "FUN FACT 01",
+      "title": "Curious by nature",
+      "text": "Placeholder fact: I enjoy learning how different tools and systems fit together.",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "label": "FUN FACT 02",
+      "title": "Detail matters",
+      "text": "Placeholder fact: I genuinely enjoy turning messy information into something clear and usable.",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "label": "FUN FACT 03",
+      "title": "Always improving",
+      "text": "Placeholder fact: I like finding small ways to make a process smoother than it was yesterday.",
+      "visible": true,
+      "order": 3
+    }
+  ]
+}

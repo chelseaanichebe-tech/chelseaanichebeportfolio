@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "id": "calendar",
+      "title": "Executive Calendar Management",
+      "category": "Calendar & Scheduling",
+      "cardLabel": "CALENDAR \u00b7 SCHEDULING",
+      "thumbClass": "thumb-1",
+      "thumbNumber": "01",
+      "tools": [
+        "Google Calendar",
+        "Calendly",
+        "Google Workspace"
+      ],
+      "description": "A practice project focused on organising an executive calendar, reducing scheduling friction and coordinating meetings across availability, priorities and time zones.",
+      "image": "",
+      "imageAlt": "Calendar dashboard placeholder",
+      "visible": true,
+      "order": 1,
+      "images": []
+    },
+    {
+      "id": "clickup",
+      "title": "Project Coordination System",
+      "category": "Project Coordination",
+      "cardLabel": "PROJECT COORDINATION",
+      "thumbClass": "thumb-2",
+      "thumbNumber": "02",
+      "tools": [
+        "ClickUp",
+        "Google Drive",
+        "Slack"
+      ],
+      "description": "A practice project showing how tasks, owners, deadlines, statuses and supporting information can be structured into a clear project workflow.",
+      "image": "",
+      "imageAlt": "ClickUp workspace placeholder",
+      "visible": true,
+      "order": 2,
+      "images": []
+    },
+    {
+      "id": "expenses",
+      "title": "Expense & Reporting Dashboard",
+      "category": "Reporting & Google Sheets",
+      "cardLabel": "REPORTING \u00b7 GOOGLE SHEETS",
+      "thumbClass": "thumb-3",
+      "thumbNumber": "03",
+      "tools": [
+        "Google Sheets",
+        "Google Workspace"
+      ],
+      "description": "A practice reporting system designed to capture expenses, categorise spending, calculate totals and present useful summaries for decision-making.",
+      "image": "",
+      "imageAlt": "Expense dashboard placeholder",
+      "visible": true,
+      "order": 3,
+      "images": []
+    },
+    {
+      "id": "travel",
+      "title": "Travel Coordination System",
+      "category": "Travel & Administration",
+      "cardLabel": "TRAVEL \u00b7 ADMINISTRATION",
+      "thumbClass": "thumb-4",
+      "thumbNumber": "04",
+      "tools": [
+        "Google Sheets",
+        "Google Drive",
+        "Google Calendar"
+      ],
+      "description": "A practice travel coordination system bringing itinerary details, transport, accommodation, contacts and key documents into one organised workflow.",
+      "image": "",
+      "imageAlt": "Travel planner placeholder",
+      "visible": true,
+      "order": 4,
+      "images": []
+    }
+  ]
+}

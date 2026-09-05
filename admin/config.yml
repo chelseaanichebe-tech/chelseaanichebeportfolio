@@ -1,0 +1,213 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://example.com
+display_url: https://example.com
+
+logo_url: "" 
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General / Hero / About / Contact"
+        file: "content/settings.json"
+        fields:
+          - { label: "Site Title (browser tab)", name: "siteTitle", widget: "string" }
+          - { label: "Site Description (SEO)", name: "siteDescription", widget: "text" }
+          - { label: "Brand Name (header/footer)", name: "brandName", widget: "string" }
+          - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
+          - { label: "Hero Role Line", name: "heroRole", widget: "string" }
+          - { label: "Hero Lead Paragraph", name: "heroLead", widget: "text" }
+          - { label: "Hero Note (under photo)", name: "heroNote", widget: "text", hint: "Use a new line for line break" }
+          - { label: "Portrait Initials", name: "portraitInitials", widget: "string" }
+          - { label: "Portrait Caption", name: "portraitCaption", widget: "string", hint: "Shown only when no photo is uploaded" }
+          - { label: "Hero / Profile Photo", name: "heroPhoto", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads", hint: "Upload your professional photo. Replaces the placeholder in the hero." }
+          - { label: "Hero Photo Alt Text", name: "heroPhotoAlt", widget: "string", required: false, hint: "Accessibility description of the photo (e.g. Chelsea Anichebe)" }
+          - { label: "About Eyebrow", name: "aboutEyebrow", widget: "string" }
+          - { label: "About Headline", name: "aboutHeadline", widget: "string" }
+          - label: "About Paragraphs"
+            name: "aboutParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "About CTA Text", name: "aboutCtaText", widget: "string" }
+          - { label: "About Image Label (placeholder text)", name: "aboutImageLabel", widget: "string", hint: "Shown only when no About image is uploaded" }
+          - { label: "About Image", name: "aboutImage", widget: "image", required: false, media_folder: "uploads", public_folder: "/uploads" }
+          - { label: "About Image Alt Text", name: "aboutImageAlt", widget: "string", required: false }
+          - { label: "Services Eyebrow", name: "servicesEyebrow", widget: "string" }
+          - { label: "Services Headline", name: "servicesHeadline", widget: "string" }
+          - { label: "Services Intro", name: "servicesIntro", widget: "text" }
+          - { label: "Portfolio Eyebrow", name: "portfolioEyebrow", widget: "string" }
+          - { label: "Portfolio Headline", name: "portfolioHeadline", widget: "string" }
+          - { label: "Portfolio Intro", name: "portfolioIntro", widget: "text" }
+          - { label: "Fun Facts Eyebrow", name: "factsEyebrow", widget: "string" }
+          - { label: "Fun Facts Headline", name: "factsHeadline", widget: "string" }
+          - { label: "Testimonials Eyebrow", name: "testimonialsEyebrow", widget: "string" }
+          - { label: "Testimonials Headline / Subheading", name: "testimonialsHeadline", widget: "string" }
+          - { label: "Tools Eyebrow", name: "toolsEyebrow", widget: "string" }
+          - { label: "Tools Headline", name: "toolsHeadline", widget: "string" }
+          - { label: "Certificates Eyebrow", name: "certificatesEyebrow", widget: "string" }
+          - { label: "Certificates Headline", name: "certificatesHeadline", widget: "string" }
+          - { label: "Contact Eyebrow", name: "contactEyebrow", widget: "string" }
+          - { label: "Contact Headline", name: "contactHeadline", widget: "string" }
+          - { label: "Contact Text", name: "contactText", widget: "text" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Upwork URL", name: "upwork", widget: "string" }
+          - { label: "Resume File", name: "resumeFile", widget: "file", media_folder: "uploads", public_folder: "/uploads", allow_multiple: false }
+          - { label: "Footer Role Line", name: "footerRole", widget: "string" }
+          - { label: "Copyright Text", name: "copyright", widget: "string" }
+          - { label: "Nav CTA Button Text", name: "navCta", widget: "string" }
+
+  - name: "service_strip"
+    label: "Service Strip (top bar)"
+    files:
+      - name: "strip"
+        label: "Service Strip Items"
+        file: "content/service-strip.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "list"
+        label: "Service List"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.number}} — {{fields.title}}"
+            fields:
+              - { label: "Number (e.g. 01)", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "projects"
+    label: "Projects / Portfolio"
+    files:
+      - name: "list"
+        label: "Projects"
+        file: "content/projects.json"
+        fields:
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.thumbNumber}} — {{fields.title}}"
+            fields:
+              - { label: "ID (unique, lowercase, no spaces)", name: "id", widget: "string", hint: "Used internally. Example: calendar" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Card Label (small text on card)", name: "cardLabel", widget: "string" }
+              - { label: "Thumb CSS Class", name: "thumbClass", widget: "select", options: ["thumb-1", "thumb-2", "thumb-3", "thumb-4"], default: "thumb-1" }
+              - { label: "Thumb Number", name: "thumbNumber", widget: "string" }
+              - label: "Tools"
+                name: "tools"
+                widget: "list"
+                field: { label: "Tool", name: "tool", widget: "string" }
+              - { label: "Description (modal)", name: "description", widget: "text" }
+              - { label: "Card / Cover Image", name: "image", widget: "image", required: false, hint: "Main image shown on the portfolio card" }
+              - { label: "Image Alt / Placeholder Text", name: "imageAlt", widget: "string" }
+              - label: "Extra Project Images (gallery)"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.src}}"
+                field: { label: "Image", name: "src", widget: "image" }
+                hint: "Add as many extra images as you want. Shown in the project modal gallery."
+                required: false
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "list"
+        label: "Testimonials"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Quote / Testimonial Text", name: "quote", widget: "text" }
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Role / Company", name: "role", widget: "string" }
+              - { label: "Client Photo (optional)", name: "photo", widget: "image", required: false }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
+              - { label: "Is Placeholder / Demo", name: "isPlaceholder", widget: "boolean", default: false, hint: "Mark true for demo content so it is clearly labelled on the site" }
+
+  - name: "funfacts"
+    label: "Fun Facts"
+    files:
+      - name: "list"
+        label: "Fun Facts"
+        file: "content/funfacts.json"
+        fields:
+          - label: "Fun Facts"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Label (e.g. FUN FACT 01)", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Optional Image", name: "image", widget: "image", required: false }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  - name: "tools"
+    label: "Tools & Skills"
+    files:
+      - name: "list"
+        label: "Tools"
+        file: "content/tools.json"
+        fields:
+          - label: "Tools"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  - name: "certificates"
+    label: "Certificates"
+    files:
+      - name: "list"
+        label: "Certificates"
+        file: "content/certificates.json"
+        fields:
+          - label: "Certificates"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Label (e.g. CERTIFICATION 01)", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link (certificate URL or #)", name: "link", widget: "string" }
+              - { label: "Certificate Image", name: "image", widget: "image", required: false }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
