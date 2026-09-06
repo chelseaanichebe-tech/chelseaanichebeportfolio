@@ -48,14 +48,17 @@
       "order": 3,
       "visible": true,
       "title": "Expense & Reporting Dashboard",
-      "images": [],
+      "images": [
+        "/uploads/pic-5.png",
+        "/uploads/pic-2.png"
+      ],
       "id": "expenses",
-      "image": "",
+      "image": "/uploads/pic-5.png",
       "tools": [
         "Google Sheets",
         "Google Workspace"
       ],
-      "description": "A practice reporting system designed to capture expenses, categorise spending, calculate totals and present useful summaries for decision-making.",
+      "description": "The business needed a reliable way to monitor monthly business expenses and identify where the most money was being spent. Using Google Sheets, i tracked and categorized 20 transactions across 8 expense categories, then created a pie chart to visually highlight the highest-spending category. I compiled the analysis into a structured Microsoft Word report, giving the client a clear overview of monthly spending and supporting better expense monitoring and financial decision-making.\n",
       "category": "Reporting & Google Sheets",
       "thumbNumber": "03"
     },
