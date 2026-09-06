@@ -61,10 +61,17 @@ async function loadJSON(path) {
   }
 }
 
-// In-memory project lookup for modal (filled from CMS)
+function mediaPath(path) {
+  if (!path) return '';
+  const p = String(path);
+  if (p.startsWith('http') || p.startsWith('/')) return p;
+  return '/' + p.replace(/^\//, '');
+}
+
+// In-memory project lookup for modal
 let projectsById = {};
 
-// ----- Apply site settings (text binds) -----
+// ----- Apply site settings -----
 function applySettings(s) {
   if (!s) return;
 
@@ -95,7 +102,6 @@ function applySettings(s) {
 
   const resumeDl = document.getElementById('resume-download');
   if (resumeDl && s.resumeFile) {
-    // Support both root path and /uploads/ path from CMS
     const path = s.resumeFile.startsWith('http') || s.resumeFile.startsWith('/')
       ? s.resumeFile
       : s.resumeFile.includes('uploads/')
@@ -104,7 +110,6 @@ function applySettings(s) {
     resumeDl.href = path;
   }
 
-  // About paragraphs
   if (Array.isArray(s.aboutParagraphs) && s.aboutParagraphs.length) {
     const box = document.getElementById('about-paragraphs');
     if (box) {
@@ -114,7 +119,6 @@ function applySettings(s) {
     }
   }
 
-  // Hero / profile photo — replaces placeholder when set in CMS
   const portrait = document.getElementById('hero-portrait');
   if (portrait && s.heroPhoto) {
     const src = mediaPath(s.heroPhoto);
@@ -123,7 +127,6 @@ function applySettings(s) {
     portrait.innerHTML = `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}">`;
   }
 
-  // About image
   const aboutImgBox = document.getElementById('about-image');
   if (aboutImgBox && s.aboutImage) {
     const src = mediaPath(s.aboutImage);
@@ -131,13 +134,6 @@ function applySettings(s) {
     aboutImgBox.classList.add('has-photo');
     aboutImgBox.innerHTML = `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}">`;
   }
-}
-
-function mediaPath(path) {
-  if (!path) return '';
-  const p = String(path);
-  if (p.startsWith('http') || p.startsWith('/')) return p;
-  return '/' + p.replace(/^\//, '');
 }
 
 // ----- Renderers -----
@@ -176,12 +172,17 @@ function renderProjects(data) {
 
   el.innerHTML = items
     .map((p) => {
-      const cover = p.image || (Array.isArray(p.images) && p.images[0] && (p.images[0].src || p.images[0]));
+      const cover =
+        p.image ||
+        (Array.isArray(p.images) && p.images[0] && (p.images[0].src || p.images[0]));
       const thumbContent = cover
-        ? `<img src="${escapeHtml(mediaPath(cover))}" alt="${escapeHtml(p.imageAlt || p.title)}" style="width:100%;height:100%;object-fit:cover">`
+        ? `<img src="${escapeHtml(mediaPath(cover))}" alt="${escapeHtml(p.imageAlt || p.title)}">`
         : `<span>${escapeHtml(p.thumbNumber || '')}</span>`;
+      const thumbClasses = cover
+        ? 'project-thumb has-image'
+        : `project-thumb ${escapeHtml(p.thumbClass || 'thumb-1')}`;
       return `<article class="project-card" data-project="${escapeHtml(p.id)}">
-        <div class="project-thumb ${escapeHtml(p.thumbClass || 'thumb-1')}">${thumbContent}</div>
+        <div class="${thumbClasses}">${thumbContent}</div>
         <div class="project-meta">
           <p>${escapeHtml(p.cardLabel || p.category || '')}</p>
           <h3>${escapeHtml(p.title)}</h3>
@@ -191,14 +192,12 @@ function renderProjects(data) {
     })
     .join('');
 
-  // Bind modal openers
   el.querySelectorAll('.project-card').forEach((card) => {
     card.addEventListener('click', () => {
       const p = projectsById[card.dataset.project];
       if (!p) return;
       const tools = (p.tools || []).map((t) => `<span>${escapeHtml(t)}</span>`).join('');
 
-      // Build gallery from cover + extra images (unlimited)
       const gallerySrcs = [];
       if (p.image) gallerySrcs.push(p.image);
       if (Array.isArray(p.images)) {
@@ -290,7 +289,6 @@ function initProjectCarousel(root) {
     goTo(index + 1);
   });
 
-  // Optional: keyboard when modal is open
   const onKey = (e) => {
     if (!pm.classList.contains('open')) return;
     if (e.key === 'ArrowRight') goTo(index + 1);
@@ -364,10 +362,7 @@ function renderTestimonials(data) {
       const btn = card.querySelector('.t-toggle');
       if (btn) btn.textContent = open ? 'Show less' : 'Read more';
     };
-    card.addEventListener('click', (e) => {
-      // Avoid double-toggle if the button itself is clicked (still fine)
-      toggle();
-    });
+    card.addEventListener('click', () => toggle());
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
