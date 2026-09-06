@@ -7,7 +7,7 @@
       "photo": "",
       "visible": true,
       "order": 1,
-      "isPlaceholder": true
+      "isPlaceholder": false
     }
   ]
 }
