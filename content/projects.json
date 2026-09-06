@@ -29,15 +29,18 @@
       "order": 2,
       "visible": true,
       "title": "Project Coordination System",
-      "images": [],
+      "images": [
+        "/uploads/screenshot-53-.png",
+        "/uploads/screenshot-54-.png",
+        "/uploads/screenshot-15-.png"
+      ],
       "id": "clickup",
-      "image": "",
+      "image": "/uploads/screenshot-53-.png",
       "tools": [
         "Trello",
-        "Notion",
-        "Slack"
+        "Notion"
       ],
-      "description": "A practice project showing how tasks, owners, deadlines, statuses and supporting information can be structured into a clear project workflow.",
+      "description": "In need of a clearer system to organize projects, track responsibilities, and stay on top of deadlines. I created 2 project management systems using Notion and Trello. In Notion, I built a task manager tracking priority, assignee, status, and due date, alongside a calendar tracker for deadlines. In Trello, I organized projects across 4 workflow stages: To Do, In Progress, Waiting for Approval, and Completed which improved task visibility, accountability, and workflow tracking.\n",
       "category": "Project Coordination",
       "thumbNumber": "02"
     },
