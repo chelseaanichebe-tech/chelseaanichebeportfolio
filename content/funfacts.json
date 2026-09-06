@@ -1,25 +1,25 @@
 {
   "items": [
     {
-      "label": "FUN FACT 01",
-      "title": "Curious by nature",
-      "text": "Placeholder fact: I enjoy learning how different tools and systems fit together.",
+      "label": " 01",
+      "title": "A little order never hurts",
+      "text": "I’ve always liked having my things organized and easy to find, even in my room. I’m also usually the one who enjoys organizing hangouts with friends and making sure everyone knows what’s happening. I guess I naturally enjoy creating order and making things easier for everyone, which also comes in handy in my work.",
       "image": "",
       "visible": true,
       "order": 1
     },
     {
-      "label": "FUN FACT 02",
-      "title": "Detail matters",
-      "text": "Placeholder fact: I genuinely enjoy turning messy information into something clear and usable.",
+      "label": "02",
+      "title": "I always try to make it work",
+      "text": "I wouldn’t call myself a perfectionist, but I like things to be well put together especially when I'm determined in achieving a goal. Whether it’s keeping my schoolwork up to date or making sure things are in order at home, I like knowing everything is handled properly. I bring that same mindset to my remote work by making sure tasks are done and everything runs smoothly.",
       "image": "",
       "visible": true,
       "order": 2
     },
     {
-      "label": "FUN FACT 03",
-      "title": "Always improving",
-      "text": "Placeholder fact: I like finding small ways to make a process smoother than it was yesterday.",
+      "label": " 03",
+      "title": "Always up for something new ",
+      "text": "I enjoy trying new foods, discovering new things, and figuring out what I like along the way. I think that curiosity also shows up in how I approach new tools and tasks, I’m usually excited to learn how something works.",
       "image": "",
       "visible": true,
       "order": 3
