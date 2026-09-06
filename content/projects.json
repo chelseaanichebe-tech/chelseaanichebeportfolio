@@ -1,79 +1,79 @@
 {
   "items": [
     {
-      "id": "calendar",
-      "title": "Executive Calendar Management",
-      "category": "Calendar & Scheduling",
-      "cardLabel": "CALENDAR \u00b7 SCHEDULING",
       "thumbClass": "thumb-1",
-      "thumbNumber": "01",
+      "cardLabel": "CALENDAR · SCHEDULING",
+      "imageAlt": "Calendar dashboard placeholder",
+      "order": 1,
+      "visible": true,
+      "title": "Executive Calendar Management",
+      "images": [],
+      "id": "calendar",
+      "image": "/uploads/email-1.png",
       "tools": [
         "Google Calendar",
         "Calendly",
         "Google Workspace"
       ],
       "description": "A practice project focused on organising an executive calendar, reducing scheduling friction and coordinating meetings across availability, priorities and time zones.",
-      "image": "",
-      "imageAlt": "Calendar dashboard placeholder",
-      "visible": true,
-      "order": 1,
-      "images": []
+      "category": "Calendar & Scheduling",
+      "thumbNumber": "01"
     },
     {
-      "id": "clickup",
-      "title": "Project Coordination System",
-      "category": "Project Coordination",
-      "cardLabel": "PROJECT COORDINATION",
       "thumbClass": "thumb-2",
-      "thumbNumber": "02",
+      "cardLabel": "PROJECT COORDINATION",
+      "imageAlt": "ClickUp workspace placeholder",
+      "order": 2,
+      "visible": true,
+      "title": "Project Coordination System",
+      "images": [],
+      "id": "clickup",
+      "image": "",
       "tools": [
         "ClickUp",
         "Google Drive",
         "Slack"
       ],
       "description": "A practice project showing how tasks, owners, deadlines, statuses and supporting information can be structured into a clear project workflow.",
-      "image": "",
-      "imageAlt": "ClickUp workspace placeholder",
-      "visible": true,
-      "order": 2,
-      "images": []
+      "category": "Project Coordination",
+      "thumbNumber": "02"
     },
     {
-      "id": "expenses",
-      "title": "Expense & Reporting Dashboard",
-      "category": "Reporting & Google Sheets",
-      "cardLabel": "REPORTING \u00b7 GOOGLE SHEETS",
       "thumbClass": "thumb-3",
-      "thumbNumber": "03",
+      "cardLabel": "REPORTING · GOOGLE SHEETS",
+      "imageAlt": "Expense dashboard placeholder",
+      "order": 3,
+      "visible": true,
+      "title": "Expense & Reporting Dashboard",
+      "images": [],
+      "id": "expenses",
+      "image": "",
       "tools": [
         "Google Sheets",
         "Google Workspace"
       ],
       "description": "A practice reporting system designed to capture expenses, categorise spending, calculate totals and present useful summaries for decision-making.",
-      "image": "",
-      "imageAlt": "Expense dashboard placeholder",
-      "visible": true,
-      "order": 3,
-      "images": []
+      "category": "Reporting & Google Sheets",
+      "thumbNumber": "03"
     },
     {
-      "id": "travel",
-      "title": "Travel Coordination System",
-      "category": "Travel & Administration",
-      "cardLabel": "TRAVEL \u00b7 ADMINISTRATION",
       "thumbClass": "thumb-4",
-      "thumbNumber": "04",
+      "cardLabel": "TRAVEL · ADMINISTRATION",
+      "imageAlt": "Travel planner placeholder",
+      "order": 4,
+      "visible": true,
+      "title": "Travel Coordination System",
+      "images": [],
+      "id": "travel",
+      "image": "",
       "tools": [
         "Google Sheets",
         "Google Drive",
         "Google Calendar"
       ],
       "description": "A practice travel coordination system bringing itinerary details, transport, accommodation, contacts and key documents into one organised workflow.",
-      "image": "",
-      "imageAlt": "Travel planner placeholder",
-      "visible": true,
-      "order": 4,
-      "images": []
+      "category": "Travel & Administration",
+      "thumbNumber": "04"
     }
   ]
 }
