@@ -6,7 +6,7 @@
       "imageAlt": "Email dashboard placeholder",
       "order": 1,
       "visible": true,
-      "title": "Executive Inbox Management & Email Workflow Optimization",
+      "title": " Email Workflow Optimization",
       "images": [
         "/uploads/email-2.png",
         "/uploads/email-1.png",
@@ -19,7 +19,7 @@
         "Google Workspace"
       ],
       "description": "This client was struggling with an overcrowded inbox, missed follow-ups, and difficulty identifying priority emails. I stepped in, reorganized and categorized 600+ emails, implemented filters, labels, priority rules, and a follow-up system, and cleared outdated messages. \nThe outcome? A 95% reduction in inbox clutter, faster identification of priority emails, and a more structured workflow for managing daily communications.",
-      "category": "Inbox Management ",
+      "category": "INBOX MANAGEMENT ",
       "thumbNumber": "01"
     },
     {
@@ -33,8 +33,8 @@
       "id": "clickup",
       "image": "",
       "tools": [
-        "ClickUp",
-        "Google Drive",
+        "Trello",
+        "Notion",
         "Slack"
       ],
       "description": "A practice project showing how tasks, owners, deadlines, statuses and supporting information can be structured into a clear project workflow.",
