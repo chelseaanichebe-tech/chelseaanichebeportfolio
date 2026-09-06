@@ -2,21 +2,20 @@
   "items": [
     {
       "thumbClass": "thumb-1",
-      "cardLabel": "CALENDAR · SCHEDULING",
+      "cardLabel": "EMAIL MANAGEMENT",
       "imageAlt": "Calendar dashboard placeholder",
       "order": 1,
       "visible": true,
-      "title": "Executive Calendar Management",
+      "title": "Executive Inbox Management & Email Workflow Optimization",
       "images": [],
-      "id": "calendar",
+      "id": "email",
       "image": "/uploads/email-2.png",
       "tools": [
-        "Google Calendar",
-        "Calendly",
+        "Gmail",
         "Google Workspace"
       ],
-      "description": "A practice project focused on organising an executive calendar, reducing scheduling friction and coordinating meetings across availability, priorities and time zones.",
-      "category": "Calendar & Scheduling",
+      "description": "This client was struggling with an overcrowded inbox, missed follow-ups, and difficulty identifying priority emails. I stepped in, reorganized and categorized 600+ emails, implemented filters, labels, priority rules, and a follow-up system, and cleared outdated messages. \nThe outcome? A 95% reduction in inbox clutter, faster identification of priority emails, and a more structured workflow for managing daily communications.",
+      "category": "Inbox Management ",
       "thumbNumber": "01"
     },
     {
