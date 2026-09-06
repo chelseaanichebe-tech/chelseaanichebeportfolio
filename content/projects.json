@@ -43,23 +43,24 @@
     },
     {
       "thumbClass": "thumb-3",
-      "cardLabel": "REPORTING · GOOGLE SHEETS",
+      "cardLabel": "DATA ENTRY",
       "imageAlt": "Expense dashboard placeholder",
       "order": 3,
       "visible": true,
-      "title": "Expense & Reporting Dashboard",
+      "title": "Expense Tracking & Report",
       "images": [
         "/uploads/pic-5.png",
-        "/uploads/pic-2.png"
+        "/uploads/pic-2.png",
+        "/uploads/screenshot-142-.png"
       ],
       "id": "expenses",
       "image": "/uploads/pic-5.png",
       "tools": [
         "Google Sheets",
-        "Google Workspace"
+        "Microsoft Word"
       ],
       "description": "The business needed a reliable way to monitor monthly business expenses and identify where the most money was being spent. Using Google Sheets, i tracked and categorized 20 transactions across 8 expense categories, then created a pie chart to visually highlight the highest-spending category. I compiled the analysis into a structured Microsoft Word report, giving the client a clear overview of monthly spending and supporting better expense monitoring and financial decision-making.\n",
-      "category": "Reporting & Google Sheets",
+      "category": "DATA ENTRY & REPORTING",
       "thumbNumber": "03"
     },
     {
