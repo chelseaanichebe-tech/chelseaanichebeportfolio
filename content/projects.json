@@ -3,11 +3,15 @@
     {
       "thumbClass": "thumb-1",
       "cardLabel": "EMAIL MANAGEMENT",
-      "imageAlt": "Calendar dashboard placeholder",
+      "imageAlt": "Email dashboard placeholder",
       "order": 1,
       "visible": true,
       "title": "Executive Inbox Management & Email Workflow Optimization",
-      "images": [],
+      "images": [
+        "/uploads/email-1.png",
+        "/uploads/email-2.png",
+        "/uploads/email-3.png"
+      ],
       "id": "email",
       "image": "/uploads/email-2.png",
       "tools": [
