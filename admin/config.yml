@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: chelseaanichebe-tech/chelseaanichebeportfolio
   branch: main
+  base_url: https://chelsea-decap-oauth.chelseaanichebe.workers.dev
+  auth_endpoint: /auth
 
 local_backend: true
 
