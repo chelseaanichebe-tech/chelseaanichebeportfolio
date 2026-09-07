@@ -84,6 +84,28 @@
       "description": "A practice travel coordination system bringing itinerary details, transport, accommodation, contacts and key documents into one organised workflow.",
       "category": "Travel & Administration",
       "thumbNumber": "04"
+    },
+    {
+      "thumbClass": "thumb-1",
+      "cardLabel": "CALENDAR MANAGEMENT ",
+      "order": 5,
+      "visible": true,
+      "title": "Calendar Management & Scheduling Coordination",
+      "images": [
+        "/uploads/cal-4.png",
+        "/uploads/cak.png",
+        "/uploads/cal-5.png",
+        "/uploads/screenshot-128-.png"
+      ],
+      "id": "calendar",
+      "image": "/uploads/cal-4.png",
+      "tools": [
+        "Google Calendar",
+        "Google Workspace"
+      ],
+      "description": "A structured calendar was created to coordinate meetings, appointments, time-blocked work sessions, and schedules across different time zones. Guest invitations, meeting details, and virtual meeting links were added to keep participants informed and organized.\n\nThe Outcome? A clearer view of priorities, fewer scheduling conflicts, better protection of focused work time, and smoother meeting coordination.",
+      "category": "CALENDAR MANAGEMENT ",
+      "thumbNumber": "05"
     }
   ]
 }
