@@ -10,6 +10,34 @@ document.querySelectorAll('.nav a').forEach((a) =>
   a.addEventListener('click', () => nav.classList.remove('open'))
 );
 
+// ----- Scroll reveal animations -----
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+} else {
+  // Fallback for older browsers
+  revealElements.forEach((element) => {
+    element.classList.add('is-visible');
+  });
+}
+
 // ----- Modals (project + resume) -----
 const pm = document.getElementById('projectModal');
 const pc = document.getElementById('projectContent');
@@ -740,14 +768,9 @@ function renderTestimonials(data) {
 // icons are used where necessary.
 function getToolLogo(name) {
   const logoMap = {
-    // Google Workspace does not reliably resolve
-    // through the Google Workspace slug, so use
-    // Google's official brand icon.
     'Google Workspace':
       'https://cdn.simpleicons.org/google',
 
-    // Microsoft Office is represented by the
-    // Microsoft 365 brand icon.
     'Microsoft Office':
       'https://cdn.simpleicons.org/microsoft365',
 
@@ -790,9 +813,6 @@ function renderTools(data) {
 
   el.innerHTML = items
     .map((t) => {
-      // Use CMS-uploaded logo first.
-      // If there is no uploaded logo, automatically
-      // use the appropriate brand logo.
       const logoSrc = t.logo
         ? mediaPath(t.logo)
         : getToolLogo(t.name);
