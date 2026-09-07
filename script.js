@@ -38,6 +38,13 @@ if ('IntersectionObserver' in window) {
   });
 }
 
+// ----- Google Analytics Event Tracking -----
+function trackEvent(eventName, eventParams = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
+
 // ----- Modals (project + resume) -----
 const pm = document.getElementById('projectModal');
 const pc = document.getElementById('projectContent');
@@ -46,6 +53,9 @@ const rm = document.getElementById('resumeModal');
 function openResume() {
   rm.classList.add('open');
   rm.setAttribute('aria-hidden', 'false');
+
+  // Track resume preview
+  trackEvent('resume_view');
 }
 
 document.getElementById('resumeOpen')?.addEventListener('click', openResume);
@@ -288,9 +298,7 @@ function renderServices(data) {
         </article>`
     )
     .join('');
-}
-
-function renderProjects(data) {
+  function renderProjects(data) {
   const el = document.getElementById('project-grid');
 
   if (!el || !data) return;
@@ -352,6 +360,13 @@ function renderProjects(data) {
       const p = projectsById[card.dataset.project];
 
       if (!p) return;
+
+      // ----- Track Project View -----
+      trackEvent('project_view', {
+        project_id: p.id || '',
+        project_name: p.title || '',
+        project_category: p.category || ''
+      });
 
       // ----- Skills & Deliverables -----
       const skills = (p.skills || [])
@@ -519,9 +534,7 @@ function renderProjects(data) {
       initProjectCarousel(pc);
     });
   });
-}
-
-function initProjectCarousel(root) {
+    function initProjectCarousel(root) {
   const carousel = root.querySelector('.project-carousel');
 
   if (!carousel) return;
@@ -754,9 +767,8 @@ function renderTestimonials(data) {
       }
     });
   });
-}
-
-// ----- Tools -----
+                          }
+    /* ----- Tools ----- */
 
 // Automatic logo mapping.
 //
@@ -935,4 +947,41 @@ function renderCertificates(data) {
   renderTestimonials(testimonials);
   renderTools(tools);
   renderCertificates(certificates);
+
+  // ----- GA4 Contact & Resume Tracking -----
+
+  const viewWorkLink = document.querySelector(
+    'a[href="#portfolio"]'
+  );
+
+  viewWorkLink?.addEventListener('click', () => {
+    trackEvent('view_work');
+  });
+
+  document.getElementById('resume-download')?.addEventListener(
+    'click',
+    () => {
+      trackEvent('resume_download');
+    }
+  );
+
+  document.addEventListener('click', (e) => {
+    const email = e.target.closest('#contact-email');
+    const linkedin = e.target.closest('#contact-linkedin');
+    const upwork = e.target.closest('#contact-upwork');
+
+    if (email) {
+      trackEvent('email_click');
+    }
+
+    if (linkedin) {
+      trackEvent('linkedin_click');
+    }
+
+    if (upwork) {
+      trackEvent('upwork_click');
+    }
+  });
 })();
+  }
+  }
