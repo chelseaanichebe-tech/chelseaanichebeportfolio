@@ -95,31 +95,28 @@
 }
 
 /* ===== View My Work Attention Animation ===== */
-.hero-actions .btn.dark{
-  animation:gentleNudge 3.5s ease-in-out infinite;
-}
-
 .hero-actions .btn.dark span{
   display:inline-block;
-  transition:transform .25s ease;
+  animation:ctaArrow 3s ease-in-out infinite;
+}
+
+@keyframes ctaArrow{
+  0%,65%,100%{
+    transform:translateX(0);
+  }
+
+  72%{
+    transform:translateX(8px);
+  }
+
+  78%{
+    transform:translateX(0);
+  }
 }
 
 .hero-actions .btn.dark:hover span{
-  transform:translateX(4px);
-}
-
-@keyframes gentleNudge{
-  0%,70%,100%{
-    transform:translateY(0);
-  }
-
-  75%{
-    transform:translateY(-3px);
-  }
-
-  80%{
-    transform:translateY(0);
-  }
+  transform:translateX(6px);
+  animation:none;
 }
 
 /* ===== Reduced Motion Accessibility ===== */
@@ -130,11 +127,8 @@
     transition:none;
   }
 
-  .hero-actions .btn.dark{
-    animation:none;
-  }
-
   .hero-actions .btn.dark span{
+    animation:none;
     transition:none;
   }
 
