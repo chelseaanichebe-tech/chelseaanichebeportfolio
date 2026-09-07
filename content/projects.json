@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "skills": [
+        "Inbox Organization",
+        "Email Categorization",
+        "Filter & Label Setup",
+        "Priority Management",
+        "Follow-Up System"
+      ],
       "thumbClass": "thumb-1",
       "cardLabel": "EMAIL MANAGEMENT",
       "imageAlt": "Email dashboard placeholder",
@@ -14,13 +21,6 @@
       ],
       "id": "email",
       "image": "/uploads/email-1.png",
-      "skills": [
-        "Inbox Organization",
-        "Email Categorization",
-        "Filter & Label Setup",
-        "Priority Management",
-        "Follow-Up System"
-      ],
       "tools": [
         "Gmail",
         "Google Workspace"
@@ -30,6 +30,14 @@
       "thumbNumber": "01"
     },
     {
+      "skills": [
+        "Task Management",
+        "Project Organization",
+        "Deadline Tracking",
+        "Workflow Management",
+        "Task Assignment",
+        "Progress Tracking"
+      ],
       "thumbClass": "thumb-2",
       "cardLabel": "PROJECT COORDINATION",
       "imageAlt": "ClickUp workspace placeholder",
@@ -43,14 +51,6 @@
       ],
       "id": "clickup",
       "image": "/uploads/screenshot-53-.png",
-      "skills": [
-        "Task Management",
-        "Project Organization",
-        "Deadline Tracking",
-        "Workflow Management",
-        "Task Assignment",
-        "Progress Tracking"
-      ],
       "tools": [
         "Trello",
         "Notion"
@@ -60,6 +60,15 @@
       "thumbNumber": "02"
     },
     {
+      "skills": [
+        "Data Entry",
+        "Expense Tracking",
+        "Data Categorization",
+        "Spreadsheet Management",
+        "Data Analysis",
+        "Report Preparation",
+        "Data Visualization"
+      ],
       "thumbClass": "thumb-3",
       "cardLabel": "DATA ENTRY",
       "imageAlt": "Expense dashboard placeholder",
@@ -73,15 +82,6 @@
       ],
       "id": "expenses",
       "image": "/uploads/pic-5.png",
-      "skills": [
-        "Data Entry",
-        "Expense Tracking",
-        "Data Categorization",
-        "Spreadsheet Management",
-        "Data Analysis",
-        "Report Preparation",
-        "Data Visualization"
-      ],
       "tools": [
         "Google Sheets",
         "Microsoft Word"
@@ -91,8 +91,17 @@
       "thumbNumber": "03"
     },
     {
+      "skills": [
+        "Appointment Scheduling",
+        "Time-Zone Management",
+        "Meeting Coordination",
+        "Calendar Organization",
+        "Time Blocking",
+        "Meeting Preparation"
+      ],
       "thumbClass": "thumb-4",
       "cardLabel": "CALENDAR MANAGEMENT",
+      "imageAlt": "CALENDAR",
       "order": 4,
       "visible": true,
       "title": "Calendar Management & Scheduling Coordination",
@@ -104,14 +113,6 @@
       ],
       "id": "calendar",
       "image": "/uploads/cal-4.png",
-      "skills": [
-        "Appointment Scheduling",
-        "Time-Zone Management",
-        "Meeting Coordination",
-        "Calendar Organization",
-        "Time Blocking",
-        "Meeting Preparation"
-      ],
       "tools": [
         "Google Calendar",
         "Google Workspace"
@@ -121,6 +122,14 @@
       "thumbNumber": "04"
     },
     {
+      "skills": [
+        "Travel Research",
+        "Flight & Hotel Research",
+        "Travel Itinerary Planning",
+        "Data Organization",
+        "Budget Tracking",
+        "Travel Reporting"
+      ],
       "thumbClass": "thumb-1",
       "cardLabel": "TRAVEL ADMINISTRATION",
       "imageAlt": "Travel planner placeholder",
@@ -136,16 +145,6 @@
       ],
       "id": "travel",
       "image": "/uploads/trave.png",
-      "skills": [
-        "Travel Research",
-        "Flight & Hotel Research",
-        "Travel Itinerary Planning",
-        "Travel Data Organization",
-        "Budget Tracking",
-        "Expense Monitoring",
-        "Cost Comparison",
-        "Travel Reporting"
-      ],
       "tools": [
         "Microsoft Office",
         "Excel",
