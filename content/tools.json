@@ -8,7 +8,8 @@
     {
       "name": "Microsoft Office",
       "visible": true,
-      "order": 2
+      "order": 2,
+      "logo": "/uploads/microsoft_office_logo_-2013-2019-.svg.webp"
     },
     {
       "name": "ClickUp",
