@@ -489,6 +489,30 @@ function renderTestimonials(data) {
 }
 
 // ----- Tools -----
+
+// Automatic logo mapping.
+// CMS-uploaded logos still take priority if a logo is added later.
+function getToolLogo(name) {
+  const logoMap = {
+    'Google Workspace': 'googleworkspace',
+    'Microsoft Office': 'microsoftoffice',
+    'ClickUp': 'clickup',
+    'Asana': 'asana',
+    'Notion': 'notion',
+    'Trello': 'trello',
+    'Calendly': 'calendly',
+    'Slack': 'slack',
+    'Canva': 'canva',
+    'Zoom': 'zoom'
+  };
+
+  const slug = logoMap[name];
+
+  if (!slug) return '';
+
+  return `https://cdn.simpleicons.org/${slug}`;
+}
+
 function renderTools(data) {
   const el = document.getElementById('tool-cloud');
 
@@ -500,18 +524,25 @@ function renderTools(data) {
 
   el.innerHTML = items
     .map((t) => {
-      const logo = t.logo
+      // Use CMS-uploaded logo first.
+      // If there is no uploaded logo, automatically use the brand logo.
+      const logoSrc = t.logo
+        ? mediaPath(t.logo)
+        : getToolLogo(t.name);
+
+      const logo = logoSrc
         ? `<img
             class="tool-logo"
-            src="${escapeHtml(mediaPath(t.logo))}"
+            src="${escapeHtml(logoSrc)}"
             alt=""
             aria-hidden="true"
+            loading="lazy"
           >`
         : '';
 
       return `<span class="tool-item">
         ${logo}
-        <span>${escapeHtml(t.name)}</span>
+        <span class="tool-name">${escapeHtml(t.name)}</span>
       </span>`;
     })
     .join('');
