@@ -10,11 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="#home" data-bind="brandName">CHELSEA ANICHEBE</a>
+
     <button class="menu-btn" aria-label="Open menu">☰</button>
+
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -22,37 +26,73 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cta" href="#contact"><span data-bind="navCta">Let's Work Together</span> <span>→</span></a>
+
+      <a class="nav-cta" href="#contact">
+        <span data-bind="navCta">Let's Work Together</span>
+        <span>→</span>
+      </a>
     </nav>
   </div>
 </header>
 
 <main>
+
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="container hero-grid">
+
       <div class="hero-copy reveal">
-        <p class="eyebrow" data-bind="heroEyebrow">EXECUTIVE SUPPORT · ADMINISTRATION · OPERATIONS</p>
-        <h1 data-bind="heroHeadline">YOU'VE FOUND THE RIGHT PERSON FOR THE JOB.</h1>
-        <p class="role" data-bind="heroRole">Executive Assistant | Administrative &amp; Operations Support</p>
-        <p class="lead" data-bind="heroLead">I help busy professionals bring structure to their schedules, communication, projects and day-to-day operations—so important work keeps moving without unnecessary friction.</p>
+        <p class="eyebrow" data-bind="heroEyebrow">
+          EXECUTIVE SUPPORT · ADMINISTRATION · OPERATIONS
+        </p>
+
+        <h1 data-bind="heroHeadline">
+          YOU'VE FOUND THE RIGHT PERSON FOR THE JOB.
+        </h1>
+
+        <p class="role" data-bind="heroRole">
+          Executive Assistant | Administrative &amp; Operations Support
+        </p>
+
+        <p class="lead" data-bind="heroLead">
+          I help busy professionals bring structure to their schedules,
+          communication, projects and day-to-day operations—so important work
+          keeps moving without unnecessary friction.
+        </p>
       </div>
+
       <div class="hero-visual reveal">
         <div class="portrait-placeholder" id="hero-portrait">
           <div>
             <span data-bind="portraitInitials">CA</span>
-            <small data-bind="portraitCaption">Professional photo<br>placeholder</small>
+            <small data-bind="portraitCaption">
+              Professional photo<br>placeholder
+            </small>
           </div>
         </div>
-        <div class="hero-note" data-bind-html="heroNote">Organised thinking.<br>Reliable execution.</div>
+
+        <div class="hero-note" data-bind-html="heroNote">
+          Organised thinking.<br>Reliable execution.
+        </div>
       </div>
+
       <div class="hero-actions reveal">
-        <a class="btn dark" href="#portfolio">View My Work <span>→</span></a>
-        <a class="btn light" href="#contact">Let's Work Together <span>→</span></a>
-        <button class="text-btn" id="resumeOpen">View Resume <span>→</span></button>
+        <a class="btn dark" href="#portfolio">
+          View My Work <span>→</span>
+        </a>
+
+        <a class="btn light" href="#contact">
+          Let's Work Together <span>→</span>
+        </a>
+
+        <button class="text-btn" id="resumeOpen">
+          View Resume <span>→</span>
+        </button>
       </div>
+
     </div>
   </section>
+
 
   <!-- SERVICE STRIP -->
   <section class="service-strip">
@@ -65,150 +105,498 @@
     </div>
   </section>
 
+
   <!-- ABOUT -->
-  <section id="about" class="section about">
+  <section id="about" class="section about reveal">
     <div class="container two-col">
-      <div class="image-placeholder tall" id="about-image"><span data-bind="aboutImageLabel">ABOUT IMAGE</span></div>
-      <div>
-        <p class="eyebrow" data-bind="aboutEyebrow">ABOUT ME</p>
-        <h2 data-bind="aboutHeadline">Support that creates space for better work.</h2>
-        <div id="about-paragraphs">
-          <p>I’m Chelsea Anichebe, an Executive Assistant and Administrative &amp; Operations Support professional focused on making work more organised, visible and easier to manage.</p>
-          <p>My approach is practical: understand what needs attention, organise the moving parts, communicate clearly and follow through. Whether it’s protecting a busy calendar, keeping an inbox under control or coordinating a project, I aim to become the dependable person behind the scenes who keeps things moving.</p>
-          <p>I’m especially interested in supporting founders, executives and growing teams that value initiative, attention to detail and calm, structured execution.</p>
-        </div>
-        <a class="inline-link" href="#contact"><span data-bind="aboutCtaText">Work with me</span> <span>→</span></a>
+
+      <div class="image-placeholder tall" id="about-image">
+        <span data-bind="aboutImageLabel">ABOUT IMAGE</span>
       </div>
+
+      <div>
+        <p class="eyebrow" data-bind="aboutEyebrow">
+          ABOUT ME
+        </p>
+
+        <h2 data-bind="aboutHeadline">
+          Support that creates space for better work.
+        </h2>
+
+        <div id="about-paragraphs">
+          <p>
+            I’m Chelsea Anichebe, an Executive Assistant and Administrative
+            &amp; Operations Support professional focused on making work more
+            organised, visible and easier to manage.
+          </p>
+
+          <p>
+            My approach is practical: understand what needs attention,
+            organise the moving parts, communicate clearly and follow through.
+            Whether it’s protecting a busy calendar, keeping an inbox under
+            control or coordinating a project, I aim to become the dependable
+            person behind the scenes who keeps things moving.
+          </p>
+
+          <p>
+            I’m especially interested in supporting founders, executives and
+            growing teams that value initiative, attention to detail and calm,
+            structured execution.
+          </p>
+        </div>
+
+        <a class="inline-link" href="#contact">
+          <span data-bind="aboutCtaText">Work with me</span>
+          <span>→</span>
+        </a>
+      </div>
+
     </div>
   </section>
+
 
   <!-- SERVICES -->
-  <section id="services" class="section beige">
+  <section id="services" class="section beige reveal">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="servicesEyebrow">WHAT I CAN HELP WITH</p>
-          <h2 data-bind="servicesHeadline">Services built around keeping work moving.</h2>
+          <p class="eyebrow" data-bind="servicesEyebrow">
+            WHAT I CAN HELP WITH
+          </p>
+
+          <h2 data-bind="servicesHeadline">
+            Services built around keeping work moving.
+          </h2>
         </div>
-        <p class="section-intro" data-bind="servicesIntro">From daily administration to project coordination, I bring structure to the details that are easy to overlook but important to get right.</p>
+
+        <p class="section-intro" data-bind="servicesIntro">
+          From daily administration to project coordination, I bring structure
+          to the details that are easy to overlook but important to get right.
+        </p>
       </div>
+
       <div class="service-list" id="services-list">
-        <article><span>01</span><div><h3>Calendar &amp; Time Management</h3><p>Coordinate meetings, protect priorities, manage scheduling conflicts and keep calendars organised around what matters most.</p></div></article>
-        <article><span>02</span><div><h3>Inbox &amp; Communication Management</h3><p>Organise incoming messages, flag priorities, support follow-ups and help keep communication clear and timely.</p></div></article>
-        <article><span>03</span><div><h3>Project &amp; Task Coordination</h3><p>Break work into trackable tasks, monitor deadlines, organise workflows and keep project details visible.</p></div></article>
-        <article><span>04</span><div><h3>Travel &amp; Meeting Coordination</h3><p>Organise travel details, meeting information, schedules and supporting documents so plans are easy to follow.</p></div></article>
-        <article><span>05</span><div><h3>File Organisation</h3><p>Create logical folder structures, maintain shared documents and make information easier for teams to find.</p></div></article>
-        <article><span>06</span><div><h3>Data Entry &amp; Reporting</h3><p>Maintain accurate records, organise spreadsheet data and turn information into clear, useful reports.</p></div></article>
+
+        <article>
+          <span>01</span>
+          <div>
+            <h3>Calendar &amp; Time Management</h3>
+            <p>
+              Coordinate meetings, protect priorities, manage scheduling
+              conflicts and keep calendars organised around what matters most.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span>02</span>
+          <div>
+            <h3>Inbox &amp; Communication Management</h3>
+            <p>
+              Organise incoming messages, flag priorities, support follow-ups
+              and help keep communication clear and timely.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span>03</span>
+          <div>
+            <h3>Project &amp; Task Coordination</h3>
+            <p>
+              Break work into trackable tasks, monitor deadlines, organise
+              workflows and keep project details visible.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span>04</span>
+          <div>
+            <h3>Travel &amp; Meeting Coordination</h3>
+            <p>
+              Organise travel details, meeting information, schedules and
+              supporting documents so plans are easy to follow.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span>05</span>
+          <div>
+            <h3>File Organisation</h3>
+            <p>
+              Create logical folder structures, maintain shared documents and
+              make information easier for teams to find.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span>06</span>
+          <div>
+            <h3>Data Entry &amp; Reporting</h3>
+            <p>
+              Maintain accurate records, organise spreadsheet data and turn
+              information into clear, useful reports.
+            </p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
+
 
   <!-- PORTFOLIO -->
-  <section id="portfolio" class="section">
+  <section id="portfolio" class="section reveal">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="portfolioEyebrow">SELECTED WORK</p>
-          <h2 data-bind="portfolioHeadline">Proof of how I think and organise.</h2>
+          <p class="eyebrow" data-bind="portfolioEyebrow">
+            SELECTED WORK
+          </p>
+
+          <h2 data-bind="portfolioHeadline">
+            Proof of how I think and organise.
+          </h2>
         </div>
-        <p class="section-intro" data-bind="portfolioIntro">A selection of practical portfolio projects demonstrating systems, coordination and administrative problem-solving.</p>
+
+        <p class="section-intro" data-bind="portfolioIntro">
+          A selection of practical portfolio projects demonstrating systems,
+          coordination and administrative problem-solving.
+        </p>
       </div>
+
       <div class="project-grid" id="project-grid">
-        <article class="project-card" data-project="calendar"><div class="project-thumb thumb-1"><span>01</span></div><div class="project-meta"><p>CALENDAR · SCHEDULING</p><h3>Executive Calendar Management</h3><button class="project-link">View Project →</button></div></article>
-        <article class="project-card" data-project="clickup"><div class="project-thumb thumb-2"><span>02</span></div><div class="project-meta"><p>PROJECT COORDINATION</p><h3>Project Coordination System</h3><button class="project-link">View Project →</button></div></article>
-        <article class="project-card" data-project="expenses"><div class="project-thumb thumb-3"><span>03</span></div><div class="project-meta"><p>REPORTING · GOOGLE SHEETS</p><h3>Expense &amp; Reporting Dashboard</h3><button class="project-link">View Project →</button></div></article>
-        <article class="project-card" data-project="travel"><div class="project-thumb thumb-4"><span>04</span></div><div class="project-meta"><p>TRAVEL · ADMINISTRATION</p><h3>Travel Coordination System</h3><button class="project-link">View Project →</button></div></article>
+
+        <article class="project-card" data-project="calendar">
+          <div class="project-thumb thumb-1">
+            <span>01</span>
+          </div>
+
+          <div class="project-meta">
+            <p>CALENDAR · SCHEDULING</p>
+            <h3>Executive Calendar Management</h3>
+
+            <button class="project-link">
+              View Project →
+            </button>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="clickup">
+          <div class="project-thumb thumb-2">
+            <span>02</span>
+          </div>
+
+          <div class="project-meta">
+            <p>PROJECT COORDINATION</p>
+            <h3>Project Coordination System</h3>
+
+            <button class="project-link">
+              View Project →
+            </button>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="expenses">
+          <div class="project-thumb thumb-3">
+            <span>03</span>
+          </div>
+
+          <div class="project-meta">
+            <p>REPORTING · GOOGLE SHEETS</p>
+            <h3>Expense &amp; Reporting Dashboard</h3>
+
+            <button class="project-link">
+              View Project →
+            </button>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="travel">
+          <div class="project-thumb thumb-4">
+            <span>04</span>
+          </div>
+
+          <div class="project-meta">
+            <p>TRAVEL · ADMINISTRATION</p>
+            <h3>Travel Coordination System</h3>
+
+            <button class="project-link">
+              View Project →
+            </button>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
+
 
   <!-- FUN FACTS -->
-  <section class="section facts beige" id="facts">
+  <section class="section facts beige reveal" id="facts">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="factsEyebrow">BEYOND THE WORK</p>
-          <h2 data-bind="factsHeadline">Three fun facts about me.</h2>
+          <p class="eyebrow" data-bind="factsEyebrow">
+            BEYOND THE WORK
+          </p>
+
+          <h2 data-bind="factsHeadline">
+            Three fun facts about me.
+          </h2>
         </div>
       </div>
+
       <div class="fact-grid" id="fact-grid">
-        <article><div class="fact-img">FUN<br>FACT 01</div><h3>Curious by nature</h3><p>Placeholder fact: I enjoy learning how different tools and systems fit together.</p></article>
-        <article><div class="fact-img">FUN<br>FACT 02</div><h3>Detail matters</h3><p>Placeholder fact: I genuinely enjoy turning messy information into something clear and usable.</p></article>
-        <article><div class="fact-img">FUN<br>FACT 03</div><h3>Always improving</h3><p>Placeholder fact: I like finding small ways to make a process smoother than it was yesterday.</p></article>
+
+        <article>
+          <div class="fact-img">
+            FUN<br>FACT 01
+          </div>
+
+          <h3>Curious by nature</h3>
+
+          <p>
+            Placeholder fact: I enjoy learning how different tools and systems
+            fit together.
+          </p>
+        </article>
+
+
+        <article>
+          <div class="fact-img">
+            FUN<br>FACT 02
+          </div>
+
+          <h3>Detail matters</h3>
+
+          <p>
+            Placeholder fact: I genuinely enjoy turning messy information into
+            something clear and usable.
+          </p>
+        </article>
+
+
+        <article>
+          <div class="fact-img">
+            FUN<br>FACT 03
+          </div>
+
+          <h3>Always improving</h3>
+
+          <p>
+            Placeholder fact: I like finding small ways to make a process
+            smoother than it was yesterday.
+          </p>
+        </article>
+
       </div>
     </div>
   </section>
 
+
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section testimonials">
+  <section id="testimonials" class="section testimonials reveal">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="testimonialsEyebrow">WHAT IT'S LIKE TO WORK WITH ME</p>
-          <h2 data-bind="testimonialsHeadline">A few words from the people I've supported.</h2>
+          <p class="eyebrow" data-bind="testimonialsEyebrow">
+            WHAT IT'S LIKE TO WORK WITH ME
+          </p>
+
+          <h2 data-bind="testimonialsHeadline">
+            A few words from the people I've supported.
+          </h2>
         </div>
       </div>
+
       <div class="testimonial-grid" id="testimonial-grid">
         <!-- Populated from content/testimonials.json -->
       </div>
+
     </div>
   </section>
+
 
   <!-- TOOLS & SKILLS -->
-  <section class="section tools" id="tools">
+  <section class="section tools reveal" id="tools">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="toolsEyebrow">TOOLS &amp; SKILLS</p>
-          <h2 data-bind="toolsHeadline">Comfortable working across modern tools.</h2>
+          <p class="eyebrow" data-bind="toolsEyebrow">
+            TOOLS &amp; SKILLS
+          </p>
+
+          <h2 data-bind="toolsHeadline">
+            Comfortable working across modern tools.
+          </h2>
         </div>
       </div>
+
       <div class="tool-cloud" id="tool-cloud">
-        <span>Google Workspace</span><span>Microsoft Office</span><span>ClickUp</span><span>Asana</span><span>Notion</span><span>Trello</span><span>Monday.com</span><span>Calendly</span><span>Slack</span><span>Airtable</span><span>Canva</span><span>Zoom</span>
+        <span>Google Workspace</span>
+        <span>Microsoft Office</span>
+        <span>ClickUp</span>
+        <span>Asana</span>
+        <span>Notion</span>
+        <span>Trello</span>
+        <span>Monday.com</span>
+        <span>Calendly</span>
+        <span>Slack</span>
+        <span>Airtable</span>
+        <span>Canva</span>
+        <span>Zoom</span>
       </div>
+
     </div>
   </section>
+
 
   <!-- CERTIFICATES -->
-  <section class="section certificates beige" id="certificates">
+  <section class="section certificates beige reveal" id="certificates">
     <div class="container">
+
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-bind="certificatesEyebrow">CERTIFICATIONS</p>
-          <h2 data-bind="certificatesHeadline">Training that supports the work.</h2>
+          <p class="eyebrow" data-bind="certificatesEyebrow">
+            CERTIFICATIONS
+          </p>
+
+          <h2 data-bind="certificatesHeadline">
+            Training that supports the work.
+          </h2>
         </div>
       </div>
+
       <div class="cert-grid" id="cert-grid">
-        <article class="certificate"><div class="cert-placeholder">CERTIFICATE<br>IMAGE</div><div><p class="cert-label">CERTIFICATION 01</p><h3>Virtual Assistant Training Certificate</h3><a href="#" class="inline-link">View Certificate →</a></div></article>
-        <article class="certificate"><div class="cert-placeholder">CERTIFICATE<br>IMAGE</div><div><p class="cert-label">CERTIFICATION 02</p><h3>Administrative &amp; Productivity Training</h3><a href="#" class="inline-link">View Certificate →</a></div></article>
+
+        <article class="certificate">
+          <div class="cert-placeholder">
+            CERTIFICATE<br>IMAGE
+          </div>
+
+          <div>
+            <p class="cert-label">
+              CERTIFICATION 01
+            </p>
+
+            <h3>
+              Virtual Assistant Training Certificate
+            </h3>
+
+            <a href="#" class="inline-link">
+              View Certificate →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="certificate">
+          <div class="cert-placeholder">
+            CERTIFICATE<br>IMAGE
+          </div>
+
+          <div>
+            <p class="cert-label">
+              CERTIFICATION 02
+            </p>
+
+            <h3>
+              Administrative &amp; Productivity Training
+            </h3>
+
+            <a href="#" class="inline-link">
+              View Certificate →
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
+
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
+  <section id="contact" class="section contact reveal">
     <div class="container contact-box">
+
       <div>
-        <p class="eyebrow" data-bind="contactEyebrow">READY WHEN YOU ARE</p>
-        <h2 data-bind="contactHeadline">LET'S WORK TOGETHER</h2>
-        <p data-bind="contactText">Need someone dependable to bring structure to the details behind your business? Let’s talk about where I can take work off your plate.</p>
+        <p class="eyebrow" data-bind="contactEyebrow">
+          READY WHEN YOU ARE
+        </p>
+
+        <h2 data-bind="contactHeadline">
+          LET'S WORK TOGETHER
+        </h2>
+
+        <p data-bind="contactText">
+          Need someone dependable to bring structure to the details behind your
+          business? Let’s talk about where I can take work off your plate.
+        </p>
       </div>
+
       <div class="contact-actions">
-        <a class="btn ivory" id="contact-email" href="mailto:hello@example.com">Email Me <span>→</span></a>
-        <a class="contact-link" id="contact-linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="contact-link" id="contact-upwork" href="#" target="_blank" rel="noopener">Upwork ↗</a>
-        <button class="contact-link" id="resumeOpen2">View / Download Resume ↓</button>
+
+        <a class="btn ivory" id="contact-email" href="mailto:hello@example.com">
+          Email Me <span>→</span>
+        </a>
+
+        <a
+          class="contact-link"
+          id="contact-linkedin"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          class="contact-link"
+          id="contact-upwork"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          Upwork ↗
+        </a>
+
+        <button class="contact-link" id="resumeOpen2">
+          View / Download Resume ↓
+        </button>
+
       </div>
+
     </div>
   </section>
+
 </main>
+
 
 <footer>
   <div class="container footer-wrap">
+
     <div>
-      <strong data-bind="brandName">CHELSEA ANICHEBE</strong>
-      <p data-bind="footerRole">Executive Assistant | Administrative &amp; Operations Support</p>
+      <strong data-bind="brandName">
+        CHELSEA ANICHEBE
+      </strong>
+
+      <p data-bind="footerRole">
+        Executive Assistant | Administrative &amp; Operations Support
+      </p>
     </div>
+
     <div class="footer-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -217,31 +605,74 @@
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </div>
-    <p data-bind="copyright">© 2026 Chelsea Anichebe</p>
+
+    <p data-bind="copyright">
+      © 2026 Chelsea Anichebe
+    </p>
+
   </div>
 </footer>
 
+
+<!-- PROJECT MODAL -->
 <div class="modal" id="projectModal" aria-hidden="true">
   <div class="modal-panel">
-    <button class="modal-close" data-close>×</button>
+
+    <button class="modal-close" data-close>
+      ×
+    </button>
+
     <div id="projectContent"></div>
+
   </div>
 </div>
 
+
+<!-- RESUME MODAL -->
 <div class="modal" id="resumeModal" aria-hidden="true">
   <div class="modal-panel resume-panel">
-    <button class="modal-close" data-close>×</button>
+
+    <button class="modal-close" data-close>
+      ×
+    </button>
+
     <div class="resume-top">
+
       <div>
-        <p class="eyebrow">RESUME</p>
-        <h2 data-bind="brandName">Chelsea Anichebe</h2>
+        <p class="eyebrow">
+          RESUME
+        </p>
+
+        <h2 data-bind="brandName">
+          Chelsea Anichebe
+        </h2>
       </div>
-      <a class="btn dark" id="resume-download" href="resume-placeholder.pdf" download>Download Resume ↓</a>
+
+      <a
+        class="btn dark"
+        id="resume-download"
+        href="resume-placeholder.pdf"
+        download
+      >
+        Download Resume ↓
+      </a>
+
     </div>
-    <div class="resume-placeholder">Your resume PDF will appear here.<br><small>Upload your real PDF through the CMS (Site Settings → Resume File) when ready.</small></div>
+
+    <div class="resume-placeholder">
+      Your resume PDF will appear here.<br>
+
+      <small>
+        Upload your real PDF through the CMS
+        (Site Settings → Resume File) when ready.
+      </small>
+    </div>
+
   </div>
 </div>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
