@@ -162,16 +162,24 @@ function applySettings(s) {
 function renderServiceStrip(data) {
   const el = document.getElementById('service-strip-grid');
   if (!el || !data) return;
+
   const items = sortVisible(data.items);
+
   if (!items.length) return;
-  el.innerHTML = items.map((i) => `<div>${escapeHtml(i.name)}</div>`).join('');
+
+  el.innerHTML = items
+    .map((i) => `<div>${escapeHtml(i.name)}</div>`)
+    .join('');
 }
 
 function renderServices(data) {
   const el = document.getElementById('services-list');
   if (!el || !data) return;
+
   const items = data.items || [];
+
   if (!items.length) return;
+
   el.innerHTML = items
     .map(
       (i) =>
@@ -185,11 +193,15 @@ function renderServices(data) {
 function renderProjects(data) {
   const el = document.getElementById('project-grid');
   if (!el || !data) return;
+
   const items = sortVisible(data.items);
+
   projectsById = {};
+
   items.forEach((p) => {
     projectsById[p.id] = p;
   });
+
   if (!items.length) return;
 
   el.innerHTML = items
@@ -197,12 +209,17 @@ function renderProjects(data) {
       const cover =
         p.image ||
         (Array.isArray(p.images) && p.images[0] && (p.images[0].src || p.images[0]));
+
       const thumbContent = cover
-        ? `<img src="${escapeHtml(mediaPath(cover))}" alt="${escapeHtml(p.imageAlt || p.title)}">`
+        ? `<img src="${escapeHtml(mediaPath(cover))}" alt="${escapeHtml(
+            p.imageAlt || p.title
+          )}">`
         : `<span>${escapeHtml(p.thumbNumber || '')}</span>`;
+
       const thumbClasses = cover
         ? 'project-thumb has-image'
         : `project-thumb ${escapeHtml(p.thumbClass || 'thumb-1')}`;
+
       return `<article class="project-card" data-project="${escapeHtml(p.id)}">
         <div class="${thumbClasses}">${thumbContent}</div>
         <div class="project-meta">
@@ -217,6 +234,7 @@ function renderProjects(data) {
   el.querySelectorAll('.project-card').forEach((card) => {
     card.addEventListener('click', () => {
       const p = projectsById[card.dataset.project];
+
       if (!p) return;
 
       // ----- Skills & Deliverables -----
@@ -230,25 +248,35 @@ function renderProjects(data) {
         .join('');
 
       const gallerySrcs = [];
+
       if (p.image) gallerySrcs.push(p.image);
+
       if (Array.isArray(p.images)) {
         p.images.forEach((img) => {
           const src = typeof img === 'string' ? img : img && img.src;
-          if (src && !gallerySrcs.includes(src)) gallerySrcs.push(src);
+
+          if (src && !gallerySrcs.includes(src)) {
+            gallerySrcs.push(src);
+          }
         });
       }
 
       let galleryHtml;
+
       if (gallerySrcs.length) {
         const slides = gallerySrcs
           .map(
             (src, i) =>
               `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-index="${i}">
-                <img src="${escapeHtml(mediaPath(src))}" alt="${escapeHtml(p.imageAlt || p.title)} ${i + 1}">
+                <img src="${escapeHtml(mediaPath(src))}" alt="${escapeHtml(
+                p.imageAlt || p.title
+              )} ${i + 1}">
               </div>`
           )
           .join('');
+
         const showNav = gallerySrcs.length > 1;
+
         galleryHtml = `
           <div class="project-carousel" data-total="${gallerySrcs.length}">
             <div class="carousel-viewport">
@@ -302,6 +330,7 @@ function renderProjects(data) {
 
       pm.classList.add('open');
       pm.setAttribute('aria-hidden', 'false');
+
       initProjectCarousel(pc);
     });
   });
@@ -309,23 +338,33 @@ function renderProjects(data) {
 
 function initProjectCarousel(root) {
   const carousel = root.querySelector('.project-carousel');
+
   if (!carousel) return;
 
-  const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+  const slides = Array.from(
+    carousel.querySelectorAll('.carousel-slide')
+  );
+
   const total = slides.length;
+
   if (total <= 1) return;
 
   let index = 0;
+
   const currentEl = carousel.querySelector('.carousel-current');
   const prevBtn = carousel.querySelector('.carousel-prev');
   const nextBtn = carousel.querySelector('.carousel-next');
 
   function goTo(nextIndex) {
     index = (nextIndex + total) % total;
+
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === index);
     });
-    if (currentEl) currentEl.textContent = String(index + 1);
+
+    if (currentEl) {
+      currentEl.textContent = String(index + 1);
+    }
   }
 
   prevBtn?.addEventListener('click', (e) => {
@@ -340,6 +379,7 @@ function initProjectCarousel(root) {
 
   const onKey = (e) => {
     if (!pm.classList.contains('open')) return;
+
     if (e.key === 'ArrowRight') goTo(index + 1);
     if (e.key === 'ArrowLeft') goTo(index - 1);
   };
@@ -349,15 +389,21 @@ function initProjectCarousel(root) {
 
 function renderFunFacts(data) {
   const el = document.getElementById('fact-grid');
+
   if (!el || !data) return;
+
   const items = sortVisible(data.items);
+
   if (!items.length) return;
 
   el.innerHTML = items
     .map((f) => {
       const label = escapeHtml(f.label || '').replace(/ /g, '<br>');
+
       const img = f.image
-        ? `<div class="fact-img has-photo"><img src="${escapeHtml(mediaPath(f.image))}" alt="${escapeHtml(f.title || '')}"></div>`
+        ? `<div class="fact-img has-photo"><img src="${escapeHtml(
+            mediaPath(f.image)
+          )}" alt="${escapeHtml(f.title || '')}"></div>`
         : `<div class="fact-img">${label}</div>`;
 
       return `<article>
@@ -371,6 +417,7 @@ function renderFunFacts(data) {
 
 function renderTestimonials(data) {
   const el = document.getElementById('testimonial-grid');
+
   if (!el) return;
 
   const items = sortVisible(data?.items);
@@ -386,7 +433,9 @@ function renderTestimonials(data) {
       const full = escapeHtml(t.quote || '');
 
       const photo = t.photo
-        ? `<img class="t-photo" src="${escapeHtml(t.photo)}" alt="${escapeHtml(t.name || '')}">`
+        ? `<img class="t-photo" src="${escapeHtml(
+            t.photo
+          )}" alt="${escapeHtml(t.name || '')}">`
         : `<div class="t-photo placeholder" aria-hidden="true">${escapeHtml(
             (t.name || '?').slice(0, 1).toUpperCase()
           )}</div>`;
@@ -415,10 +464,17 @@ function renderTestimonials(data) {
   el.querySelectorAll('.testimonial-card').forEach((card) => {
     const toggle = () => {
       const open = card.classList.toggle('is-expanded');
-      card.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+      card.setAttribute(
+        'aria-expanded',
+        open ? 'true' : 'false'
+      );
 
       const btn = card.querySelector('.t-toggle');
-      if (btn) btn.textContent = open ? 'Show less' : 'Read more';
+
+      if (btn) {
+        btn.textContent = open ? 'Show less' : 'Read more';
+      }
     };
 
     card.addEventListener('click', () => toggle());
@@ -432,8 +488,10 @@ function renderTestimonials(data) {
   });
 }
 
+// ----- Tools -----
 function renderTools(data) {
   const el = document.getElementById('tool-cloud');
+
   if (!el || !data) return;
 
   const items = sortVisible(data.items);
@@ -441,12 +499,27 @@ function renderTools(data) {
   if (!items.length) return;
 
   el.innerHTML = items
-    .map((t) => `<span>${escapeHtml(t.name)}</span>`)
+    .map((t) => {
+      const logo = t.logo
+        ? `<img
+            class="tool-logo"
+            src="${escapeHtml(mediaPath(t.logo))}"
+            alt=""
+            aria-hidden="true"
+          >`
+        : '';
+
+      return `<span class="tool-item">
+        ${logo}
+        <span>${escapeHtml(t.name)}</span>
+      </span>`;
+    })
     .join('');
 }
 
 function renderCertificates(data) {
   const el = document.getElementById('cert-grid');
+
   if (!el || !data) return;
 
   const items = sortVisible(data.items);
@@ -456,7 +529,11 @@ function renderCertificates(data) {
   el.innerHTML = items
     .map((c) => {
       const img = c.image
-        ? `<img src="${escapeHtml(mediaPath(c.image))}" alt="${escapeHtml(c.title)}" style="width:100%;height:100%;object-fit:cover">`
+        ? `<img src="${escapeHtml(
+            mediaPath(c.image)
+          )}" alt="${escapeHtml(
+            c.title
+          )}" style="width:100%;height:100%;object-fit:cover">`
         : `CERTIFICATE<br>IMAGE`;
 
       return `<article class="certificate">
@@ -465,7 +542,9 @@ function renderCertificates(data) {
           <p class="cert-label">${escapeHtml(c.label || '')}</p>
           <h3>${escapeHtml(c.title || '')}</h3>
           <a href="${escapeHtml(c.link || '#')}" class="inline-link" ${
-            c.link && c.link !== '#' ? 'target="_blank" rel="noopener"' : ''
+            c.link && c.link !== '#'
+              ? 'target="_blank" rel="noopener"'
+              : ''
           }>View Certificate →</a>
         </div>
       </article>`;
