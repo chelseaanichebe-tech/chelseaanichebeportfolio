@@ -125,16 +125,29 @@ collections:
               - { label: "Card Label (small text on card)", name: "cardLabel", widget: "string" }
               - { label: "Thumb CSS Class", name: "thumbClass", widget: "select", options: ["thumb-1", "thumb-2", "thumb-3", "thumb-4"], default: "thumb-1" }
               - { label: "Thumb Number", name: "thumbNumber", widget: "string" }
+
+              - label: "Skills & Deliverables"
+                name: "skills"
+                widget: "list"
+                required: false
+                field:
+                  label: "Skill / Deliverable"
+                  name: "skill"
+                  widget: "string"
+
               - label: "Tools"
                 name: "tools"
                 widget: "list"
+                required: false
                 field:
                   label: "Tool"
                   name: "tool"
                   widget: "string"
+
               - { label: "Description (modal)", name: "description", widget: "text" }
               - { label: "Card / Cover Image", name: "image", widget: "image", required: false, hint: "Main image shown on the portfolio card" }
               - { label: "Image Alt / Placeholder Text", name: "imageAlt", widget: "string" }
+
               - label: "Extra Project Images (gallery)"
                 name: "images"
                 widget: "list"
@@ -145,6 +158,7 @@ collections:
                   widget: "image"
                 hint: "Add as many extra images as you want. Shown in the project modal gallery."
                 required: false
+
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
               - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
 
@@ -200,6 +214,7 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Upload the logo for this tool. It will be displayed beside the tool name." }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
               - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
 
