@@ -100,14 +100,30 @@ function applySettings(s) {
   const up = document.getElementById('contact-upwork');
   if (up && s.upwork) up.href = s.upwork;
 
+  // ---- Resume download + PDF preview ----
   const resumeDl = document.getElementById('resume-download');
-  if (resumeDl && s.resumeFile) {
+  const resumeBox = document.querySelector('.resume-placeholder, .resume-viewer');
+
+  if (s.resumeFile) {
     const path = s.resumeFile.startsWith('http') || s.resumeFile.startsWith('/')
       ? s.resumeFile
       : s.resumeFile.includes('uploads/')
         ? '/' + s.resumeFile.replace(/^\//, '')
         : s.resumeFile;
-    resumeDl.href = path;
+
+    if (resumeDl) resumeDl.href = path;
+
+    if (resumeBox) {
+      resumeBox.classList.remove('resume-placeholder');
+      resumeBox.classList.add('resume-viewer');
+      resumeBox.innerHTML = `
+        <iframe
+          src="${escapeHtml(path)}#toolbar=1&navpanes=0"
+          title="Chelsea Anichebe Resume"
+          loading="lazy"
+        ></iframe>
+      `;
+    }
   }
 
   if (Array.isArray(s.aboutParagraphs) && s.aboutParagraphs.length) {
@@ -252,6 +268,7 @@ function renderProjects(data) {
         <div class="tool-tags">${tools}</div>
         <p><button class="inline-link" data-close>← Back to Portfolio</button></p>
       </div>`;
+
       pm.classList.add('open');
       pm.setAttribute('aria-hidden', 'false');
       initProjectCarousel(pc);
@@ -325,7 +342,6 @@ function renderTestimonials(data) {
     el.innerHTML = '';
     return;
   }
-
   el.innerHTML = items
     .map((t, idx) => {
       const preview = escapeHtml(t.quote || '');
