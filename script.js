@@ -218,7 +218,16 @@ function renderProjects(data) {
     card.addEventListener('click', () => {
       const p = projectsById[card.dataset.project];
       if (!p) return;
-      const tools = (p.tools || []).map((t) => `<span>${escapeHtml(t)}</span>`).join('');
+
+      // ----- Skills & Deliverables -----
+      const skills = (p.skills || [])
+        .map((skill) => `<span>${escapeHtml(skill)}</span>`)
+        .join('');
+
+      // ----- Tools Used -----
+      const tools = (p.tools || [])
+        .map((t) => `<span>${escapeHtml(t)}</span>`)
+        .join('');
 
       const gallerySrcs = [];
       if (p.image) gallerySrcs.push(p.image);
@@ -267,11 +276,27 @@ function renderProjects(data) {
 
       pc.innerHTML = `<div class="modal-project">
         ${galleryHtml}
+
         <p class="eyebrow">${escapeHtml(p.category || '')}</p>
+
         <h2>${escapeHtml(p.title)}</h2>
+
         <p>${escapeHtml(p.description || '')}</p>
-        <h3>Tools Used</h3>
-        <div class="tool-tags">${tools}</div>
+
+        ${
+          skills
+            ? `<h3>Skills &amp; Deliverables</h3>
+               <div class="tool-tags">${skills}</div>`
+            : ''
+        }
+
+        ${
+          tools
+            ? `<h3>Tools Used</h3>
+               <div class="tool-tags">${tools}</div>`
+            : ''
+        }
+
         <p><button class="inline-link" data-close>← Back to Portfolio</button></p>
       </div>`;
 
@@ -307,6 +332,7 @@ function initProjectCarousel(root) {
     e.stopPropagation();
     goTo(index - 1);
   });
+
   nextBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
     goTo(index + 1);
@@ -317,6 +343,7 @@ function initProjectCarousel(root) {
     if (e.key === 'ArrowRight') goTo(index + 1);
     if (e.key === 'ArrowLeft') goTo(index - 1);
   };
+
   document.addEventListener('keydown', onKey);
 }
 
@@ -325,12 +352,14 @@ function renderFunFacts(data) {
   if (!el || !data) return;
   const items = sortVisible(data.items);
   if (!items.length) return;
+
   el.innerHTML = items
     .map((f) => {
       const label = escapeHtml(f.label || '').replace(/ /g, '<br>');
       const img = f.image
         ? `<div class="fact-img has-photo"><img src="${escapeHtml(mediaPath(f.image))}" alt="${escapeHtml(f.title || '')}"></div>`
         : `<div class="fact-img">${label}</div>`;
+
       return `<article>
         ${img}
         <h3>${escapeHtml(f.title)}</h3>
@@ -343,23 +372,29 @@ function renderFunFacts(data) {
 function renderTestimonials(data) {
   const el = document.getElementById('testimonial-grid');
   if (!el) return;
+
   const items = sortVisible(data?.items);
+
   if (!items.length) {
     el.innerHTML = '';
     return;
   }
+
   el.innerHTML = items
     .map((t, idx) => {
       const preview = escapeHtml(t.quote || '');
       const full = escapeHtml(t.quote || '');
+
       const photo = t.photo
         ? `<img class="t-photo" src="${escapeHtml(t.photo)}" alt="${escapeHtml(t.name || '')}">`
         : `<div class="t-photo placeholder" aria-hidden="true">${escapeHtml(
             (t.name || '?').slice(0, 1).toUpperCase()
           )}</div>`;
+
       const badge = t.isPlaceholder
         ? `<span class="placeholder-badge">Placeholder / Demo</span>`
         : '';
+
       return `<article class="testimonial-card" data-index="${idx}" tabindex="0" role="button" aria-expanded="false">
         ${badge}
         <div class="quote-mark" aria-hidden="true">“</div>
@@ -381,10 +416,13 @@ function renderTestimonials(data) {
     const toggle = () => {
       const open = card.classList.toggle('is-expanded');
       card.setAttribute('aria-expanded', open ? 'true' : 'false');
+
       const btn = card.querySelector('.t-toggle');
       if (btn) btn.textContent = open ? 'Show less' : 'Read more';
     };
+
     card.addEventListener('click', () => toggle());
+
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -397,21 +435,30 @@ function renderTestimonials(data) {
 function renderTools(data) {
   const el = document.getElementById('tool-cloud');
   if (!el || !data) return;
+
   const items = sortVisible(data.items);
+
   if (!items.length) return;
-  el.innerHTML = items.map((t) => `<span>${escapeHtml(t.name)}</span>`).join('');
+
+  el.innerHTML = items
+    .map((t) => `<span>${escapeHtml(t.name)}</span>`)
+    .join('');
 }
 
 function renderCertificates(data) {
   const el = document.getElementById('cert-grid');
   if (!el || !data) return;
+
   const items = sortVisible(data.items);
+
   if (!items.length) return;
+
   el.innerHTML = items
     .map((c) => {
       const img = c.image
         ? `<img src="${escapeHtml(mediaPath(c.image))}" alt="${escapeHtml(c.title)}" style="width:100%;height:100%;object-fit:cover">`
         : `CERTIFICATE<br>IMAGE`;
+
       return `<article class="certificate">
         <div class="cert-placeholder">${img}</div>
         <div>
