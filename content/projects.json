@@ -90,21 +90,27 @@
     },
     {
       "thumbClass": "thumb-1",
-      "cardLabel": "TRAVEL · ADMINISTRATION",
+      "cardLabel": "TRAVEL ADMINISTRATION",
       "imageAlt": "Travel planner placeholder",
       "order": 5,
       "visible": true,
       "title": "Travel Coordination System",
-      "images": [],
-      "id": "travel",
-      "image": "",
-      "tools": [
-        "Google Sheets",
-        "Google Drive",
-        "Google Calendar"
+      "images": [
+        "/uploads/trave.png",
+        "/uploads/trave-2.png",
+        "/uploads/trave-6.png",
+        "/uploads/trave-5.png",
+        "/uploads/trave-4.png"
       ],
-      "description": "A practice travel coordination system bringing itinerary details, transport, accommodation, contacts and key documents into one organised workflow.",
-      "category": "Travel & Administration",
+      "id": "travel",
+      "image": "/uploads/trave.png",
+      "tools": [
+        "Microsoft Office",
+        " Excel",
+        "Microsoft Word"
+      ],
+      "description": "Designed a travel coordination system to solve the challenge of keeping flight, hotel, itinerary, and budget information organized in one place. Researched and compared travel options, documented findings in Excel, and created a structured travel report to make decision-making and coordination more efficient.\n\nThen I built an Excel-based travel budget tracker to calculate projected and actual costs, monitor spending, and determine whether the trip remained within the allocated budget. The completed system consolidated 20+ travel and expense data points into an organized workflow, providing clear visibility into travel arrangements and budget status.",
+      "category": "TRAVEL ADMINISTRATION",
       "thumbNumber": "05"
     }
   ]
