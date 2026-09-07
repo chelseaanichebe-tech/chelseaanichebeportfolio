@@ -6,7 +6,7 @@
       "imageAlt": "Email dashboard placeholder",
       "order": 1,
       "visible": true,
-      "title": " Email Workflow Optimization",
+      "title": "Email Workflow Optimization",
       "images": [
         "/uploads/email-2.png",
         "/uploads/email-1.png",
@@ -14,12 +14,19 @@
       ],
       "id": "email",
       "image": "/uploads/email-1.png",
+      "skills": [
+        "Inbox Organization",
+        "Email Categorization",
+        "Filter & Label Setup",
+        "Priority Management",
+        "Follow-Up System"
+      ],
       "tools": [
         "Gmail",
         "Google Workspace"
       ],
-      "description": "This client was struggling with an overcrowded inbox, missed follow-ups, and difficulty identifying priority emails. I stepped in, reorganized and categorized 600+ emails, implemented filters, labels, priority rules, and a follow-up system, and cleared outdated messages. \nThe outcome? A 95% reduction in inbox clutter, faster identification of priority emails, and a more structured workflow for managing daily communications.",
-      "category": "INBOX MANAGEMENT ",
+      "description": "This client was struggling with an overcrowded inbox, missed follow-ups, and difficulty identifying priority emails. I stepped in, reorganized and categorized 600+ emails, implemented filters, labels, priority rules, and a follow-up system, and cleared outdated messages.\n\nThe outcome? A 95% reduction in inbox clutter, faster identification of priority emails, and a more structured workflow for managing daily communications.",
+      "category": "INBOX MANAGEMENT",
       "thumbNumber": "01"
     },
     {
@@ -36,12 +43,20 @@
       ],
       "id": "clickup",
       "image": "/uploads/screenshot-53-.png",
+      "skills": [
+        "Task Management",
+        "Project Organization",
+        "Deadline Tracking",
+        "Workflow Management",
+        "Task Assignment",
+        "Progress Tracking"
+      ],
       "tools": [
         "Trello",
         "Notion"
       ],
-      "description": "In need of a clearer system to organize projects, track responsibilities, and stay on top of deadlines. I created 2 project management systems using Notion and Trello. In Notion, I built a task manager tracking priority, assignee, status, and due date, alongside a calendar tracker for deadlines. In Trello, I organized projects across 4 workflow stages: To Do, In Progress, Waiting for Approval, and Completed which improved task visibility, accountability, and workflow tracking.\n",
-      "category": "Project Coordination",
+      "description": "In need of a clearer system to organize projects, track responsibilities, and stay on top of deadlines. I created 2 project management systems using Notion and Trello. In Notion, I built a task manager tracking priority, assignee, status, and due date, alongside a calendar tracker for deadlines. In Trello, I organized projects across 4 workflow stages: To Do, In Progress, Waiting for Approval, and Completed which improved task visibility, accountability, and workflow tracking.",
+      "category": "PROJECT COORDINATION",
       "thumbNumber": "02"
     },
     {
@@ -58,17 +73,26 @@
       ],
       "id": "expenses",
       "image": "/uploads/pic-5.png",
+      "skills": [
+        "Data Entry",
+        "Expense Tracking",
+        "Data Categorization",
+        "Spreadsheet Management",
+        "Data Analysis",
+        "Report Preparation",
+        "Data Visualization"
+      ],
       "tools": [
         "Google Sheets",
         "Microsoft Word"
       ],
-      "description": "The business needed a reliable way to monitor monthly business expenses and identify where the most money was being spent. Using Google Sheets, i tracked and categorized 20 transactions across 8 expense categories, then created a pie chart to visually highlight the highest-spending category. I compiled the analysis into a structured Microsoft Word report, giving the client a clear overview of monthly spending and supporting better expense monitoring and financial decision-making.\n",
+      "description": "The business needed a reliable way to monitor monthly business expenses and identify where the most money was being spent. Using Google Sheets, I tracked and categorized 20 transactions across 8 expense categories, then created a pie chart to visually highlight the highest-spending category. I compiled the analysis into a structured Microsoft Word report, giving the client a clear overview of monthly spending and supporting better expense monitoring and financial decision-making.",
       "category": "DATA ENTRY & REPORTING",
       "thumbNumber": "03"
     },
     {
       "thumbClass": "thumb-4",
-      "cardLabel": "CALENDAR MANAGEMENT ",
+      "cardLabel": "CALENDAR MANAGEMENT",
       "order": 4,
       "visible": true,
       "title": "Calendar Management & Scheduling Coordination",
@@ -80,12 +104,20 @@
       ],
       "id": "calendar",
       "image": "/uploads/cal-4.png",
+      "skills": [
+        "Appointment Scheduling",
+        "Time-Zone Management",
+        "Meeting Coordination",
+        "Calendar Organization",
+        "Time Blocking",
+        "Meeting Preparation"
+      ],
       "tools": [
         "Google Calendar",
         "Google Workspace"
       ],
-      "description": "A structured calendar was created to coordinate meetings, appointments, time-blocked work sessions, and schedules across different time zones. Guest invitations, meeting details, and virtual meeting links were added to keep participants informed and organized.\n\nThe Outcome? A clearer view of priorities, fewer scheduling conflicts, better protection of focused work time, and smoother meeting coordination.",
-      "category": "CALENDAR MANAGEMENT ",
+      "description": "A structured calendar was created to coordinate meetings, appointments, time-blocked work sessions, and schedules across different time zones. Guest invitations, meeting details, and virtual meeting links were added to keep participants informed and organized.\n\nThe outcome? A clearer view of priorities, fewer scheduling conflicts, better protection of focused work time, and smoother meeting coordination.",
+      "category": "CALENDAR MANAGEMENT",
       "thumbNumber": "04"
     },
     {
@@ -104,9 +136,19 @@
       ],
       "id": "travel",
       "image": "/uploads/trave.png",
+      "skills": [
+        "Travel Research",
+        "Flight & Hotel Research",
+        "Travel Itinerary Planning",
+        "Travel Data Organization",
+        "Budget Tracking",
+        "Expense Monitoring",
+        "Cost Comparison",
+        "Travel Reporting"
+      ],
       "tools": [
         "Microsoft Office",
-        " Excel",
+        "Excel",
         "Microsoft Word"
       ],
       "description": "Designed a travel coordination system to solve the challenge of keeping flight, hotel, itinerary, and budget information organized in one place. Researched and compared travel options, documented findings in Excel, and created a structured travel report to make decision-making and coordination more efficient.\n\nThen I built an Excel-based travel budget tracker to calculate projected and actual costs, monitor spending, and determine whether the trip remained within the allocated budget. The completed system consolidated 20+ travel and expense data points into an organized workflow, providing clear visibility into travel arrangements and budget status.",
