@@ -118,10 +118,16 @@ function applySettings(s) {
       resumeBox.classList.add('resume-viewer');
       resumeBox.innerHTML = `
         <iframe
+          class="resume-pdf"
           src="${escapeHtml(path)}#toolbar=1&navpanes=0"
           title="Chelsea Anichebe Resume"
           loading="lazy"
         ></iframe>
+        <img
+          class="resume-image"
+          src="/uploads/screenshot-146-c.png"
+          alt="Chelsea Anichebe Resume"
+        >
       `;
     }
   }
