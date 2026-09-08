@@ -298,7 +298,9 @@ function renderServices(data) {
         </article>`
     )
     .join('');
-  function renderProjects(data) {
+}
+
+function renderProjects(data) {
   const el = document.getElementById('project-grid');
 
   if (!el || !data) return;
@@ -534,7 +536,9 @@ function renderServices(data) {
       initProjectCarousel(pc);
     });
   });
-    function initProjectCarousel(root) {
+}
+
+function initProjectCarousel(root) {
   const carousel = root.querySelector('.project-carousel');
 
   if (!carousel) return;
@@ -767,8 +771,9 @@ function renderTestimonials(data) {
       }
     });
   });
-                          }
-    /* ----- Tools ----- */
+}
+
+// ----- Tools -----
 
 // Automatic logo mapping.
 //
@@ -983,5 +988,3 @@ function renderCertificates(data) {
     }
   });
 })();
-  }
-  }
