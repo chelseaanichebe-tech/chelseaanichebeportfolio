@@ -163,6 +163,7 @@
       ],
       "thumbClass": "thumb-1",
       "cardLabel": "GOOGLE DRIVE ORGANISATION",
+      "imageAlt": "file organisation",
       "order": 6,
       "visible": true,
       "title": "File Organization & Document Management",
@@ -180,6 +181,19 @@
       "description": "I transformed an unstructured Google Drive into a clear, organized document management system. By creating a logical folder hierarchy, categorizing files, and applying consistent naming conventions, I improved file accessibility and made documents faster to locate and manage.\n\nThe result was a cleaner digital workspace, more efficient document retrieval, and a structured workflow that supports smoother day-to-day administrative operations.",
       "category": "GOOGLE DRIVE ORGANISATION",
       "thumbNumber": "06"
+    },
+    {
+      "thumbClass": "thumb-1",
+      "cardLabel": "SURVEY ANALYSIS",
+      "imageAlt": "SURVEY",
+      "order": 1,
+      "visible": true,
+      "title": "Data Collection & Response Tracking",
+      "id": "survey",
+      "image": "",
+      "description": "In need of a simpler way to collect and keep track of survey responses without manually sorting through submissions. I created a Google Forms survey and linked it to Google Sheets, where responses were automatically organized and tracked. This reduced manual data entry, kept all responses in one place, and made it easier to monitor submissions, review the data, and identify useful patterns for decision-making.\n",
+      "category": "SURVEY ANALYSIS",
+      "thumbNumber": "07"
     }
   ]
 }
