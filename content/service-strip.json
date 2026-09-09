@@ -21,19 +21,9 @@
       "order": 4
     },
     {
-      "name": "Data Entry & Reporting",
+      "name": "Data Entry & Reportin",
       "visible": true,
       "order": 5
-    },
-    {
-      "visible": true,
-      "order": 6,
-      "name": "Document & Presentation Support"
-    },
-    {
-      "visible": true,
-      "order": 7,
-      "name": "CRM & Database Management"
     }
   ]
 }
