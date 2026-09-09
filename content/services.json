@@ -29,6 +29,11 @@
       "number": "06",
       "title": "Data Entry & Reporting",
       "description": "Maintain accurate records, organise spreadsheet data and turn information into clear, useful reports."
+    },
+    {
+      "number": "07",
+      "title": "CRM & Database Management",
+      "description": "Keeping client and business data organized, accurate, and accessible, maintain organized systems that make follow-ups and day-to-day operations more efficient."
     }
   ]
 }
