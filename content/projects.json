@@ -153,6 +153,33 @@
       "description": "I developed a centralized travel coordination system to organize flights, hotels, itineraries, and expenses. Researched and compared travel options, organized 20+ data points in Excel, and created a structured travel report for easier decision-making.\n\nThen built a budget tracker to compare projected and actual costs, monitor spending, and ensure the trip stayed within budget. The final system provided a clear overview of travel arrangements and budget status.",
       "category": "TRAVEL ADMINISTRATION",
       "thumbNumber": "05"
+    },
+    {
+      "skills": [
+        "Data Organization",
+        "Document Management System",
+        "Administrative Support",
+        "Folder & File Structuring"
+      ],
+      "thumbClass": "thumb-1",
+      "cardLabel": "GOOGLE DRIVE ORGANISATION",
+      "order": 6,
+      "visible": true,
+      "title": "File Organization & Document Management",
+      "images": [
+        "/uploads/google-drive-1.png",
+        "/uploads/google-drive-2.png",
+        "/uploads/google-drive-3.png"
+      ],
+      "id": "files",
+      "image": "/uploads/google-drive-1.png",
+      "tools": [
+        "Google Drive",
+        "Google Workspace"
+      ],
+      "description": "I transformed an unstructured Google Drive into a clear, organized document management system. By creating a logical folder hierarchy, categorizing files, and applying consistent naming conventions, I improved file accessibility and made documents faster to locate and manage.\n\nThe result was a cleaner digital workspace, more efficient document retrieval, and a structured workflow that supports smoother day-to-day administrative operations.",
+      "category": "GOOGLE DRIVE ORGANISATION",
+      "thumbNumber": "06"
     }
   ]
 }
