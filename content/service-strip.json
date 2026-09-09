@@ -27,12 +27,12 @@
     },
     {
       "visible": true,
-      "order": 5,
+      "order": 6,
       "name": "Document & Presentation Support"
     },
     {
       "visible": true,
-      "order": 6,
+      "order": 7,
       "name": "CRM & Database Management"
     }
   ]
