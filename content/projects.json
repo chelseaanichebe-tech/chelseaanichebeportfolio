@@ -183,14 +183,30 @@
       "thumbNumber": "06"
     },
     {
+      "skills": [
+        "Spreadsheet Management ",
+        "Data Visualization",
+        "Survey Data Collection",
+        " Data Entry & Organization",
+        "Reporting & Insights"
+      ],
       "thumbClass": "thumb-1",
       "cardLabel": "SURVEY ANALYSIS",
       "imageAlt": "SURVEY",
-      "order": 1,
+      "order": 7,
       "visible": true,
       "title": "Data Collection & Response Tracking",
+      "images": [
+        "/uploads/form-1.png",
+        "/uploads/form-2.png",
+        "/uploads/form-3.png"
+      ],
       "id": "survey",
-      "image": "",
+      "image": "/uploads/form-1.png",
+      "tools": [
+        "Google Forms",
+        "Google Sheets"
+      ],
       "description": "In need of a simpler way to collect and keep track of survey responses without manually sorting through submissions. I created a Google Forms survey and linked it to Google Sheets, where responses were automatically organized and tracked. This reduced manual data entry, kept all responses in one place, and made it easier to monitor submissions, review the data, and identify useful patterns for decision-making.\n",
       "category": "SURVEY ANALYSIS",
       "thumbNumber": "07"
