@@ -210,6 +210,39 @@
       "description": "In need of a simpler way to collect and keep track of survey responses without manually sorting through submissions. I created a Google Forms survey and linked it to Google Sheets, where responses were automatically organized and tracked. This reduced manual data entry, kept all responses in one place, and made it easier to monitor submissions, review the data, and identify useful patterns for decision-making.\n",
       "category": "SURVEY ANALYSIS",
       "thumbNumber": "07"
+    },
+    {
+      "skills": [
+        "CRM setup",
+        "Data entry",
+        "Sales pipeline management",
+        " Contact Management",
+        "Follow-up and task management",
+        "Data accuracy and organisation",
+        "Lead tracking and deal pipeline"
+      ],
+      "thumbClass": "thumb-1",
+      "cardLabel": "CRM & DATABASE MANAGEMENT",
+      "order": 1,
+      "visible": true,
+      "title": "CRM & Database Management",
+      "images": [
+        "/uploads/screenshot-95-.png",
+        "/uploads/screenshot-96-.png",
+        "/uploads/screenshot-99-.png",
+        "/uploads/screenshot-101-.png",
+        "/uploads/screenshot-104-.png",
+        "/uploads/screenshot-103-.png",
+        "/uploads/screenshot-109-.png"
+      ],
+      "id": "CRM",
+      "image": "/uploads/screenshot-95-.png",
+      "tools": [
+        "Hubspot"
+      ],
+      "description": "Businesses need a reliable system to organize customer information, track leads, and manage relationships effectively. I used HubSpot CRM to create and organize contact records, manage company information, explore contact properties, track leads through deal pipeline stages, and maintain structured customer data. This project demonstrates how HubSpot can centralize customer information, improve lead visibility, and support more organized follow-ups and sales pipeline management.",
+      "category": "CRM & DATABASE MANAGEMENT",
+      "thumbNumber": "8"
     }
   ]
 }
